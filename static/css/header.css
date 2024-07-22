@@ -1,0 +1,22 @@
+.sfera_logo-1 {
+    position: static;
+    margin-left: 350px;
+    width: 500px;
+    height: 90px;
+}
+
+.navbar {
+    background: #F7941D;
+    color: white;
+    font-size: 24px;
+    font-family: "Rubik";
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navbar a {
+    margin-right: 78px;
+}
