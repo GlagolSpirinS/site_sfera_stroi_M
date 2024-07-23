@@ -8,14 +8,15 @@
 
         <link rel="stylesheet" href="{% static 'css/header.css'%}" type="text/css">
         <meta charset="UTF-8">
-        <img class="sfera_logo-1" src="{% static 'img/sfera_logo-1.svg' %}">
-
+        <a href="{% url "index" %}">
+            <img class="sfera_logo-1" src="{% static 'img/sfera_logo-1.svg' %}">
+        </a>
         <div class="navbar">
-                <a>РУКОВОДСТВО</a>
-                <a>ВАКАНСИИ</a>
-                <a>НАШИ ОБЪЕКТЫ</a>
-                <a>ПАРТНЁРЫ</a>
-                <a>КОНТАКТЫ</a>
+                <a href="personal">РУКОВОДСТВО</a>
+                <a href="job" >ВАКАНСИИ</a>
+                <a href="place">НАШИ ОБЪЕКТЫ</a>
+                <a href="partner">ПАРТНЁРЫ</a>
+                <a href="contact">КОНТАКТЫ</a>
         </div>
     </head>
 </html>

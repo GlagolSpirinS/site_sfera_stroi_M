@@ -7,7 +7,6 @@
 
 .navbar {
     background: #F7941D;
-    color: white;
     font-size: 24px;
     font-family: "Rubik";
     height: 70px;
@@ -19,4 +18,9 @@
 
 .navbar a {
     margin-right: 78px;
+    color: white;
+}
+
+a {
+    text-decoration: none;
 }
