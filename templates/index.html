@@ -1,5 +1,12 @@
-<!DOCTYPE html>
-<html>
-    <title>Главная</title>
-    {% extends "header.html" %}
-</html>
+{% extends "header.html" %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <div class="blur">
+        <img src="{% static 'img/background.png' %}">
+        <p>СТРОИТЕЛЬСТВО ОБЪЕКТОВ ЖЕЛЕЗНОДОРОЖНОЙ ИНФРАСТРУКТУРЫ</p>
+    </div>
+{% endblock %}
