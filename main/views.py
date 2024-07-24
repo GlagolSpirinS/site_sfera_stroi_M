@@ -1,7 +1,9 @@
 from django.shortcuts import render
+from .models import ObjectMain
 
 def home(request):
-    return render(request, 'index.html')
+    objects = ObjectMain.objects.all()
+    return render(request, 'index.html', {'objects': objects})
 def personal(request):
     return render(request, 'personal.html')
 def job(request):

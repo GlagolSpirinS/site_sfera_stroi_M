@@ -5,11 +5,32 @@
 {% block content %}
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <script src="{% static 'js/header.js' %}"></script>
     <div class="blur">
-        <img src="{% static 'img/pizdatiy_fon.png' %}">
+        <img src="{% static 'img/pizdatiy_fon.png' %}" alt="Background">
         <p>СТРОИТЕЛЬСТВО ОБЪЕКТОВ<br>ЖЕЛЕЗНОДОРОЖНОЙ<br>ИНФРАСТРУКТУРЫ</p>
     </div>
     <div class="pizda">
         РЕАЛИЗОВАННЫЕ ОБЪЕКТЫ
+    </div>
+    <div class="objectMain">
+        <button id="prevBtn">Назад</button>
+        <div class="carousel-container">
+            <div class="carousel">
+                {% for obj in objects %}
+                    <div class="carousel-item">
+                        <h3>{{ obj.name }}</h3>
+                        {% if obj.image %}
+                            <img src="{{ obj.image.url }}" alt="{{ obj.name }}" style="max-width: 300px; max-height: 200px;">
+                        {% else %}
+                            <p>Нет изображения</p>
+                        {% endif %}
+                    </div>
+                {% empty %}
+                    <div class="carousel-item">Нет реализованных объектов</div>
+                {% endfor %}
+            </div>
+        </div>
+        <button id="nextBtn">Вперёд</button>
     </div>
 {% endblock %}

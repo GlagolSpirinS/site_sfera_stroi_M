@@ -36,3 +36,26 @@
     margin-left: 350px;
     margin-top: 20px;
 }
+
+.objectMain {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.carousel-container {
+    overflow: hidden;
+    width: 960px; /* Ширина, достаточная для трёх карточек по 320px каждая */
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 320px;
+    box-sizing: border-box;
+    padding: 10px;
+}
