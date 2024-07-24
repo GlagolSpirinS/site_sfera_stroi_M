@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import ObjectMain
 
-# Register your models here.
+@admin.register(ObjectMain)
+class ItemAdmin(admin.ModelAdmin):
+    list_display = ('name', 'image')

@@ -1,6 +1,6 @@
 .blur {
     background: #ff0000;
-    height: 370px;
+    height: 270px;
     display: flex;
     color: white;
     align-items: center;
@@ -13,8 +13,7 @@
     height: 100%;
     object-fit: cover;
     position: absolute;
-    top: 0;
-    left: 0;
+
     z-index: 1; /* задний план */
 }
 
@@ -22,7 +21,7 @@
     position: relative;
     z-index: 2; /* передний план */
     font-family: Rubik;
-    margin-left: 350px;
+    margin-left: 400px;
     font-weight: bold; /* жирный текст */
     font-size: 48px;
     text-align: left; /* выравнивание текста по центру */
