@@ -3,7 +3,6 @@
     height: 370px;
     display: flex;
     color: white;
-    justify-content: center;
     align-items: center;
     font-size: 15px;
     position: relative; /* добавлено для позиционирования дочерних элементов */
@@ -23,7 +22,18 @@
     position: relative;
     z-index: 2; /* передний план */
     font-family: Rubik;
+    margin-left: 350px;
     font-weight: bold; /* жирный текст */
+    font-size: 48px;
     text-align: left; /* выравнивание текста по центру */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* тень для текста */
+}
+
+.pizda {
+    color: #F7941D;
+    font-family: Rubik;
+    font-size: 36px;
+    font-weight: bold;
+    margin-left: 350px;
+    margin-top: 20px;
 }
