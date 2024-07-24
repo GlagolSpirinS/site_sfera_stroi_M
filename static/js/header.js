@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
     const carousel = document.querySelector(".carousel");
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
     const items = document.querySelectorAll(".carousel-item");
     const itemWidth = items[0].offsetWidth;
     const itemsVisible = 3;
@@ -13,17 +11,17 @@ document.addEventListener("DOMContentLoaded", function() {
         carousel.style.transform = `translateX(${offset}px)`;
     }
 
-    prevBtn.addEventListener("click", function() {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateCarousel();
-        }
-    });
-
-    nextBtn.addEventListener("click", function() {
-        if (currentIndex < totalItems - itemsVisible) {
-            currentIndex++;
-            updateCarousel();
+    carousel.addEventListener("wheel", function(event) {
+        if (event.deltaY > 0) {
+            if (currentIndex < totalItems - itemsVisible) {
+                currentIndex++;
+                updateCarousel();
+            }
+        } else {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
         }
     });
 
