@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import ObjectMain, Managers
+from .models import ObjectMain, Managers, Jobs
 
 def home(request):
     objects = ObjectMain.objects.all()
@@ -9,7 +9,8 @@ def personal(request):
     return render(request, 'personal.html', {'objects': objects})
 
 def job(request):
-    return render(request, 'job.html')
+    object = Jobs.objects.all()
+    return render(request, 'job.html', {'objects': object})
 def place(request):
     return render(request, "place.html")
 def partner(request):

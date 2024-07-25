@@ -8,12 +8,10 @@
 }
 
 .manager_spisok {
+    margin-left: 350px;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     gap: 40px;
-    justify-content: center;
-    align-content: center;
+    flex-direction: column;
 }
 
 .manager_item {
@@ -28,8 +26,8 @@
 
 /*ШРИФТ ГОВНО*/
 
-.manager_item p {
+.manager_item span {
     font-family: Rubik;
-    font-weight: bold;
+    font-weight: 300;
     font-size: 30px;
 }
