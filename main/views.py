@@ -1,11 +1,13 @@
 from django.shortcuts import render
-from .models import ObjectMain
+from .models import ObjectMain, Managers
 
 def home(request):
     objects = ObjectMain.objects.all()
     return render(request, 'index.html', {'objects': objects})
 def personal(request):
-    return render(request, 'personal.html')
+    objects = Managers.objects.all()
+    return render(request, 'personal.html', {'objects': objects})
+
 def job(request):
     return render(request, 'job.html')
 def place(request):

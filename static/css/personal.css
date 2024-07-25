@@ -1,0 +1,35 @@
+.chlen_slona {
+    font-family: Rubik;
+    font-weight: bold;
+    color: #F7941D;
+    margin-left: 350px;
+    margin-top: 20px;
+    font-size: 35px;
+}
+
+.manager_spisok {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+    align-content: center;
+}
+
+.manager_item {
+    border: 0px solid #F7941D;
+    padding: 10px;
+    margin-top: 20px;
+    /*flex: 0 0 calc(33.3333% - 40px);*/
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+/*ШРИФТ ГОВНО*/
+
+.manager_item p {
+    font-family: Rubik;
+    font-weight: bold;
+    font-size: 30px;
+}

@@ -85,10 +85,9 @@
     transform: translateX(-50%); /* Выравнивание текста по центру */
     z-index: 1; /* Помещает текст поверх изображения */
     font-family: Rubik;
+    font-weight: 600;
     font-size: 40px;
     padding: 10px; /* Добавить отступы, если нужно */
     box-sizing: border-box; /* Чтобы padding не увеличивал общие размеры элемента */
 }
-
-
 

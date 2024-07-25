@@ -1,5 +1,19 @@
-<!DOCTYPE html>
-<html>
-    <title>Руководство</title>
-    {% extends "header.html" %}
-</html>
+{% extends "header.html" %}
+
+{% block title %}Руководство{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/personal.css' %}">
+    <script src="{% static 'js/personal.js' %}"></script>
+    <div class="chlen_slona">
+        Руководители
+    </div>
+<div class="manager_spisok">
+    {% for obj in objects %}
+        <div class="manager_item">
+            <p> {{ obj.surname }}<br> {{ obj.name }} <br> {{ obj.role }}</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
