@@ -16,3 +16,4 @@ class Jobs(models.Model):
     underworking = models.BooleanField(choices=[(True, 'Да'), (False, 'Нет')], default=False)
     table = models.TextField(max_length=255)
     description = models.TextField()
+    gorod = models.CharField(max_length=100)
