@@ -13,4 +13,5 @@ urlpatterns = [
     path('partner', views.partner, name='partner'),
     path('contact', views.contact, name='contact'),
     path('admin/', admin.site.urls, name='admin'),
+    path('job/<int:id>/', views.job_detail, name='job_detail'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

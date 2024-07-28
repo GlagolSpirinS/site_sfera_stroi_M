@@ -1,0 +1,71 @@
+.chlen_slona {
+    font-family: Rubik;
+    font-weight: bold;
+    color: #F7941D;
+    margin-left: 350px;
+    margin-top: 20px;
+    font-size: 35px;
+}
+
+.conteiner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.boxjob {
+    min-width: 50%;
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    background-color: #fff; /* Основной цвет фона */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.boxjob::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); /* Цвет тени, который будет покрывать фон */
+    transition: opacity 0.3s ease;
+    opacity: 0; /* Начальное состояние (невидимый) */
+    z-index: 1; /* Расположить поверх контента */
+}
+
+.boxjob:hover::before {
+    opacity: 1; /* Показать цвет тени при наведении */
+}
+
+.boxjob:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.name{
+    color: black;
+    font-family: Rubik;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.salary{
+    color: black;
+    font-family: Rubik;
+    font-size: 22px;
+}
+
+.city{
+    color: black;
+    font-family: Rubik;
+    padding-right: 3.09278vh;
+    font-size: 2.06186vh;
+}

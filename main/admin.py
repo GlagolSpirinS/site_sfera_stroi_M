@@ -11,4 +11,4 @@ class ItemAdmin(admin.ModelAdmin):
 
 @admin.register(Jobs)
 class ItemAdmin(admin.ModelAdmin):
-    list_display = ('name', 'salary', 'old_work', 'busyness', 'chart', 'remote_work', 'underworking')
+    list_display = ('name', 'salary', 'trebuyemyy_opyt_raboty', 'zanyatost', 'grafik', 'udalonnayarabota', 'mesto_raboty')
