@@ -53,19 +53,22 @@
 .name{
     color: black;
     font-family: Rubik;
-    font-weight: bold;
-    font-size: 22px;
+    font-weight: 400;
+    font-size: 30px;
 }
 
 .salary{
     color: black;
     font-family: Rubik;
-    font-size: 22px;
+    font-weight: 400;
+    font-size: 25px;
+    color: #abacac;
 }
 
 .city{
     color: black;
     font-family: Rubik;
-    padding-right: 3.09278vh;
-    font-size: 2.06186vh;
+    font-weight: 400;
+    font-size: 25px;
+    color: #abacac;
 }

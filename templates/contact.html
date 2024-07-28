@@ -1,5 +1,30 @@
-<!DOCTYPE html>
-<html>
-    <title>Контакты</title>
-    {% extends "header.html" %}
-</html>
+{% extends "header.html" %}
+
+{% block title %}Контанты{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <div class="chlen_slona">
+        Контанты
+    </div>
+    <div class="flex-container">
+      <div class="first">
+          <div>
+            <span>Адрес</span>
+            <span style="color: #abacac" >ул. Буракова, 29, Москва, 105118</span>
+          </div>
+
+          <div>
+              <span>Телефон</span>
+              <span style="color:#abacac;">+7 (495) 967-67-87</span>
+          </div>
+
+          <div>
+            <span>Email</span>
+            <span style="color: #abacac">info-sfera.m@mail.ru</span>
+          </div>
+      </div>
+      <div class="second"></div>
+    </div>
+{% endblock %}

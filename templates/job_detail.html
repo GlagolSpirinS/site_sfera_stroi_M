@@ -3,18 +3,22 @@
 {% block title %}Подробности о вакансии{% endblock %}
 
 {% block content %}
-    <div class="job-detail">
-        <h1>{{ job.name }}</h1>
-        <p><strong>Зарплата:</strong> {{ job.salary }} ₽</p>
-        <p><strong>Требуемый опыт работы:</strong> {{ job.trebuyemyy_opyt_raboty }}</p>
-        <p><strong>Занятость:</strong> {{ job.zanyatost }}</p>
-        <p><strong>График:</strong> {{ job.grafik }}</p>
-        <p><strong>Удалённая работа:</strong> {{ job.udalonnayarabota|yesno:"Да,Нет" }}</p>
-        <p><strong>Краткое описание:</strong> {{ job.kratkoye_opisaniye }}</p>
-        <p><strong>Описание:</strong> {{ job.opisaniye }}</p>
-        <p><strong>Условия:</strong> {{ job.usloviya }}</p>
-        <p><strong>Требования:</strong> {{ job.trebovaniya }}</p>
-        <p><strong>Обязанности:</strong> {{ job.obyazannosti }}</p>
-        <p><strong>Место работы:</strong> {{ job.mesto_raboty }}</p>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/job_detail.css' %}">
+    <div class="conteiner">
+        <div class="boxjob">
+            <snap class="name">{{ job.name }}</snap>
+            <span class="salary"><strong>Зарплата:</strong> {{ job.salary }} ₽</span>
+            <snap class="city"><strong>Требуемый опыт работы:</strong> {{ job.trebuyemyy_opyt_raboty }}</snap>
+            <snap class="city"><strong>Занятость:</strong> {{ job.zanyatost }}</snap>
+            <snap class="city"><strong>График:</strong> {{ job.grafik }}</snap>
+            <snap class="city"><strong>Удалённая работа:</strong> {{ job.udalonnayarabota|yesno:"Да,Нет" }}</snap>
+            <snap class="city"><strong>Краткое описание:</strong> {{ job.kratkoye_opisaniye }}</snap>
+            <snap class="city"><strong>Описание:</strong> {{ job.opisaniye }}</snap>
+            <snap class="city"><strong>Условия:</strong> {{ job.usloviya }}</snap>
+            <snap class="city"><strong>Требования:</strong> {{ job.trebovaniya }}</snap>
+            <snap class="city"><strong>Обязанности:</strong> {{ job.obyazannosti }}</snap>
+            <snap class="city"><strong>Место работы:</strong> {{ job.mesto_raboty }}</snap>
+        </div>
     </div>
 {% endblock %}

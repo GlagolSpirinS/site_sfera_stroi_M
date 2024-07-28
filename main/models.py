@@ -19,3 +19,8 @@ class Jobs(models.Model):
     trebovaniya = models.TextField(default='SOME STRING')
     obyazannosti = models.TextField(default='SOME STRING')
     mesto_raboty = models.CharField(max_length=100, default='SOME STRING')
+
+class Object(models.Model):
+    name = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='objectImg/')
+    description = models.TextField()

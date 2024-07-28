@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import ObjectMain, Managers, Jobs
+from .models import ObjectMain, Managers, Jobs, Object
 
 @admin.register(ObjectMain)
 class ItemAdmin(admin.ModelAdmin):
@@ -12,3 +12,7 @@ class ItemAdmin(admin.ModelAdmin):
 @admin.register(Jobs)
 class ItemAdmin(admin.ModelAdmin):
     list_display = ('name', 'salary', 'trebuyemyy_opyt_raboty', 'zanyatost', 'grafik', 'udalonnayarabota', 'mesto_raboty')
+
+@admin.register(Object)
+class ItemAdmin(admin.ModelAdmin):
+    list_display = ('name', 'image', 'description')

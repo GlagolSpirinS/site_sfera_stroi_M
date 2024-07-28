@@ -1,0 +1,40 @@
+.conteiner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxjob {
+    min-width: 50%;
+    display: flex;
+    margin-top: 20px;
+    font-size: 20px;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    background-color: #fff; /* Основной цвет фона */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    max-width: 50px;
+    color: black;
+}
+
+.name {
+    font-family: Rubik;
+    font-weight: bold;
+}
+
+.salary {
+    font-family: Rubik;
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+.city {
+    font-family: Rubik;
+    font-weight: 400;
+    margin-top: 15px;
+}

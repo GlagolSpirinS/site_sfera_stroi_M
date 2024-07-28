@@ -1,5 +1,23 @@
-<!DOCTYPE html>
-<html>
-    <title>Контакты</title>
-    {% extends "header.html" %}
-</html>
+{% extends "header.html" %}
+
+{% block title %}Наши объекты{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/place.css' %}">
+    <div class="chlen_slona">
+        Наши объекты
+    </div>
+    <div class="objectList">
+        {% for obj in objects %}
+            <div class="objectList_Item">
+                <span class="popka_negra">{{ obj.name }}</span>
+                {% if obj.image %}
+                    <img src="{{ obj.image.url }}" alt="{{ obj.name }}">
+                {% else %}
+                    <p>Нет изображения</p>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
