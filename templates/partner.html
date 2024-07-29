@@ -8,14 +8,15 @@
     <div class="chlen_slona">
         ПАРТНЁРЫ
     </div>
-    <div>
+    <div class="partners-container">
         {% for obj in objects %}
-            {{ obj.name }}
-            {% if obj.image %}
-                <img src="{{ obj.image.url }}">
+            <div class="partner-item">
+                {% if obj.image %}
+                    <img src="{{ obj.image.url }}" alt="{{ obj.name }}" class="partner-img">
                 {% else %}
-                    иди на хуй
-            {% endif %}
+                    <p>Нет изображения</p>
+                {% endif %}
+            </div>
         {% endfor %}
     </div>
 {% endblock %}

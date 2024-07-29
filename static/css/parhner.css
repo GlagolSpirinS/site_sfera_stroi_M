@@ -6,3 +6,23 @@
     margin-top: 20px;
     font-size: 35px;
 }
+
+.partner-img {
+    width: 350px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.partners-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.partner-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
