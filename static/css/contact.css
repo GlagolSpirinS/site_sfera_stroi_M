@@ -23,7 +23,7 @@
     flex-direction: column;
     margin-left: 350px;
     height: 300px;
-    flex-grow: 3;
+    flex-grow: 1;
 }
 
 .first div {
@@ -34,8 +34,31 @@
 }
 
 .second {
-     background: green;
+     /*background: green;*/
      height: 300px;
-     flex-grow: 7;
+     flex-grow: 10;
+}
 
+.map_but {
+    display: inline-block;
+    padding: 10px 20px;
+    color: black;
+    background-color: #F7941D;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    font-family: 'Rubik';
+    font-weight: 400;
+    margin-top: 10px;
+    max-width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map_but:hover {
+    background-color: #FFA726;
+    transform: scale(1.1);
 }

@@ -15,10 +15,10 @@
         <img class="sfera_logo-1" src="{% static 'img/sfera_logo-1.svg' %}" alt="Логотип">
     </a>
     <div class="navbar">
-        <a href="{% url 'personal' %}">РУКОВОДСТВО</a>
-        <a href="{% url 'job' %}">ВАКАНСИИ</a>
         <a href="{% url 'place' %}">НАШИ ОБЪЕКТЫ</a>
         <a href="{% url 'partner' %}">ПАРТНЁРЫ</a>
+        <a href="{% url 'job' %}">ВАКАНСИИ</a>
+        <a href="{% url 'personal' %}">РУКОВОДСТВО</a>
         <a href="{% url 'contact' %}">КОНТАКТЫ</a>
     </div>
     {% block content %}{% endblock %}

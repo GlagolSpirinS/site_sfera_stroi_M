@@ -1,5 +1,21 @@
-<!DOCTYPE html>
-<html>
-    <title>Контакты</title>
-    {% extends "header.html" %}
-</html>
+{% extends "header.html" %}
+
+{% block title %}Партнёры{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/parhner.css' %}">
+    <div class="chlen_slona">
+        ПАРТНЁРЫ
+    </div>
+    <div>
+        {% for obj in objects %}
+            {{ obj.name }}
+            {% if obj.image %}
+                <img src="{{ obj.image.url }}">
+                {% else %}
+                    иди на хуй
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}

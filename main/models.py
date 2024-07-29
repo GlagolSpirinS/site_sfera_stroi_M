@@ -24,3 +24,7 @@ class Object(models.Model):
     name = models.CharField(max_length=100)
     image = models.ImageField(upload_to='objectImg/')
     description = models.TextField()
+
+class Partner(models.Model):
+    name = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='partnerImg/')
