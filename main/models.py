@@ -14,7 +14,6 @@ class Jobs(models.Model):
     grafik = models.CharField(max_length=100)
     udalonnayarabota = models.BooleanField(choices=[(True, 'Да'), (False, 'Нет')], default=False)
     kratkoye_opisaniye = models.TextField(max_length=255)
-    opisaniye = models.TextField(default='SOME STRING')
     usloviya = models.TextField()
     trebovaniya = models.TextField(default='SOME STRING')
     obyazannosti = models.TextField(default='SOME STRING')

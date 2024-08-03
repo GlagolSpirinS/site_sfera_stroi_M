@@ -7,22 +7,25 @@
     font-size: 35px;
 }
 
-.partner-img {
-    width: 350px;
-    height: 100px;
-    object-fit: contain;
-}
-
 .partners-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 40px;
     justify-content: center;
+    gap: 20px; /* Увеличили отступ между элементами */
+    margin-top: 40px;
 }
 
 .partner-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    flex: 1 1 280px; /* Установили фиксированную ширину */
+    max-width: 280px;
+}
+
+.partner-img {
+    width: 100%; /* Заполняем всю ширину элемента */
+    height: auto; /* Высота будет рассчитываться автоматически */
+    object-fit: contain;
+}
+
+.partner-item a {
+    display: block; /* Сделаем ссылку блочным элементом */
 }
