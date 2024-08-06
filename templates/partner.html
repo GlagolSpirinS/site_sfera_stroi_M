@@ -11,13 +11,11 @@
     <div class="partners-container">
         {% for obj in objects %}
             <div class="partner-item">
-                <a href="{{ obj.link }}">
-                    {% if obj.image %}
-                        <img src="{{ obj.image.url }}" alt="{{ obj.name }}" class="partner-img">
-                    {% else %}
-                        <p>Нет изображения</p>
-                    {% endif %}
-                </a>
+                {% if obj.image %}
+                    <img src="{{ obj.image.url }}" alt="{{ obj.name }}" class="partner-img">
+                {% else %}
+                    <p>Нет изображения</p>
+                {% endif %}
             </div>
         {% endfor %}
     </div>
