@@ -34,7 +34,6 @@
 }
 
 .second {
-     /*background: green;*/
      height: 300px;
      flex-grow: 10;
 }
