@@ -4,6 +4,10 @@ from .models import ObjectMain, Managers, Jobs, Object, Partner
 def home(request):
     objects = ObjectMain.objects.all()
     return render(request, 'index.html', {'objects': objects})
+
+def company(request):
+    objects = ObjectMain.objects.all()
+    return render(request, 'company.html', {'objects': objects})
 def personal(request):
     objects = Managers.objects.all()
     return render(request, 'personal.html', {'objects': objects})

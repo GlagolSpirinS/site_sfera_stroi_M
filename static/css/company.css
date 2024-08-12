@@ -1,0 +1,52 @@
+.chlen_slona {
+    font-family: Rubik;
+    font-weight: bold;
+    color: #F7941D;
+    margin-left: 350px;
+    margin-top: 20px;
+    font-size: 35px;
+}
+
+.all {
+    font-family: Rubik;
+}
+
+.gaga {
+    font-weight: bold;
+    font-size: 33px;
+    margin-left: 360px;
+}
+
+.content {
+    font-size: 25px;
+    margin-left: 380px;
+}
+
+.content2 {
+    font-size: 25px;
+    margin-left: 380px;
+    display: flex;
+}
+
+.spisokrabot {
+    width: 350px;
+    height: 350px;
+    border-radius: 15px;
+    background-color: Snow;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pizda {
+    margin-top: 20px ;
+}
+
+ul, li {
+    margin: 0;
+}
+
+ul li {
+    color: #F7941D;
+}
+ul li:first-line  {
+    color: black;
+}
