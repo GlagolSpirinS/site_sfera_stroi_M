@@ -1,0 +1,38 @@
+.chlen_slona {
+    font-family: Rubik;
+    font-weight: bold;
+    color: #F7941D;
+    margin-left: 350px;
+    margin-top: 20px;
+    font-size: 35px;
+}
+
+img {
+    margin-left: 350px;
+    width: 600px;
+    height: 512px;
+}
+
+.blur {
+    display: flex;
+}
+
+.rounded-image {
+    border-radius: 15px; /* Установите радиус закругления, нужный вам */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Пример тени: горизонтальное смещение, вертикальное смещение, размытие, цвет */
+    max-width: 100%; /* Опционально: чтобы изображение не выходило за пределы контейнера */
+    height: auto; /* Опционально: чтобы сохранить пропорции изображения */
+}
+
+.opis {
+    margin-left: 40px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    color: #434343;
+}
+
+#description {
+    color: #F7941D;
+    white-space: pre-wrap; /* Сохраняет пробелы и разрывы строк */
+}

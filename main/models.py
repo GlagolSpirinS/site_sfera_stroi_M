@@ -23,7 +23,14 @@ class Object(models.Model):
     name = models.CharField(max_length=100)
     image = models.ImageField(upload_to='objectImg/')
     description = models.TextField()
+    is_ready = models.BooleanField(default=False)  # Новое булевое поле
 
 class Partner(models.Model):
     name = models.CharField(max_length=100)
     image = models.ImageField(upload_to='partnerImg/')
+
+class applicant(models.Model):
+    name = models.CharField(max_length=100)
+    surname = models.CharField(max_length=100)
+    number = models.CharField(max_length=100)
+    description = models.TextField()

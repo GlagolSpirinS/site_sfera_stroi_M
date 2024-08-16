@@ -1,0 +1,53 @@
+{% extends "header.html" %}
+
+
+{% block title %}Откликнуться на вакансию{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/apply_for_job.css' %}">
+    <div class="form-container">
+        <h1 class="chlen_slona">Откликнуться на вакансию: {{ job.name }}</h1>
+        <form class="forma_big" method="post">
+            {% csrf_token %}
+            <div class="form-field">
+                <label for="{{ form.name.id_for_label }}">Имя:</label>
+                {{ form.name }}
+            </div>
+            <div class="form-field">
+                <label for="{{ form.surname.id_for_label }}">Фамилия:</label>
+                {{ form.surname }}
+            </div>
+            <div class="form-field">
+                <label for="{{ form.number.id_for_label }}">Номер телефона:</label>
+                {{ form.number }}
+            </div>
+            <div class="form-field">
+                <label for="{{ form.description.id_for_label }}">Описание:</label>
+                {{ form.description }}
+            </div>
+            <button class="btn-filter" type="submit">Отправить</button>
+        </form>
+    </div>
+
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.errorlist').forEach(function(errorList) {
+        errorList.style.display = 'none';
+    });
+});
+</script>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Скрыть все метки в форме
+            var labels = document.querySelectorAll('form label');
+            labels.forEach(function(label) {
+                label.style.display = 'none';
+            });
+        });
+    </script>
+{% endblock %}
+
+

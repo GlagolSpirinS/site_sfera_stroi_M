@@ -1,5 +1,5 @@
 .chlen_slona {
-    font-family: Rubik;
+    font-family: 'Rubik', sans-serif;
     font-weight: bold;
     color: #F7941D;
     margin-left: 350px;
@@ -25,6 +25,7 @@
     font-family: 'Rubik', sans-serif;
     border: 5px solid #F7941D;
     overflow: hidden;
+    transition: transform 0.3s ease-in-out; /* Добавлен переход для карточки */
 }
 
 .objectList_Item img {
@@ -34,19 +35,51 @@
     position: absolute;
     top: 0;
     left: 0;
+    transition: transform 0.3s ease-in-out; /* Добавлен переход для изображения */
+}
+
+.objectList_Item:hover img {
+    transform: scale(1.1); /* Увеличение изображения при наведении */
+}
+
+.objectList_Item:hover {
+    transform: scale(1.05); /* Увеличение карточки при наведении */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Добавление тени при наведении */
 }
 
 .popka_negra {
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* тень для текста */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень для текста */
     position: absolute; /* Абсолютное позиционирование текста */
     bottom: 0; /* Расположить текст у нижнего края родительского элемента */
-    left: 50%; /* Расположить текст по центру родительского элемента */
+    left: 50%; /* Центрирование текста по горизонтали */
     transform: translateX(-50%); /* Выравнивание текста по центру */
     z-index: 1; /* Помещает текст поверх изображения */
-    font-family: Rubik;
+    font-family: 'Rubik', sans-serif;
     font-weight: 600;
     font-size: 40px;
     padding: 10px; /* Добавить отступы, если нужно */
     box-sizing: border-box; /* Чтобы padding не увеличивал общие размеры элемента */
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.btn-filter {
+    background-color: #F7941D;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-filter:hover {
+    background-color: #d8791b;
 }

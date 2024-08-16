@@ -7,68 +7,103 @@
     font-size: 35px;
 }
 
-.conteiner{
+.conteiner {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    margin-bottom: 20px;
 }
 
 .boxjob {
     min-width: 50%;
     display: flex;
-    margin-top: 20px;
     flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    text-decoration: none;
     border-radius: 20px;
     position: relative;
     overflow: hidden;
-    background-color: #fff; /* Основной цвет фона */
+    background-color: #fff;
     transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
-.boxjob::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.1); /* Цвет тени, который будет покрывать фон */
-    transition: opacity 0.3s ease;
-    opacity: 0; /* Начальное состояние (невидимый) */
-    z-index: 1; /* Расположить поверх контента */
-}
+/*.boxjob::before {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    background: rgba(0, 0, 0, 0.1);*/
+/*    transition: opacity 0.3s ease;*/
+/*    opacity: 0;*/
+/*    z-index: 1;*/
+/*}*/
 
-.boxjob:hover::before {
-    opacity: 1; /* Показать цвет тени при наведении */
-}
+/*.boxjob:hover::before {*/
+/*    opacity: 1;*/
+/*}*/
 
-.boxjob:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
+/*.boxjob:hover {*/
+/*    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);*/
+/*}*/
 
-.name{
-    color: black;
-    font-family: Rubik;
+.name {
+    color: #333;
+    font-family: Rubik, sans-serif;
     font-weight: 400;
     font-size: 30px;
 }
 
-.salary{
-    color: black;
-    font-family: Rubik;
+.salary,
+.city {
+    color: #666;
+    font-family: Rubik, sans-serif;
     font-weight: 400;
     font-size: 25px;
-    color: #abacac;
 }
 
-.city{
-    color: black;
-    font-family: Rubik;
-    font-weight: 400;
-    font-size: 25px;
-    color: #abacac;
+.salary {
+    margin-top: 10px;
+}
+
+.city {
+    margin-top: 5px;
+}
+
+.apply-button,
+.details-button {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    pointer-events: auto; /* Убедитесь, что кнопки доступны для клика */
+}
+
+.apply-button {
+    background-color: #28a745;
+}
+
+.apply-button:hover {
+    background-color: #218838;
+}
+
+.details-button {
+    background-color: #007bff;
+    margin-left: 10px;
+}
+
+.details-button:hover {
+    background-color: #0056b3;
 }

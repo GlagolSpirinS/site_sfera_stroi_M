@@ -1,0 +1,67 @@
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.chlen_slona {
+    font-family: Rubik, serif;
+    font-weight: bold;
+    color: #F7941D;
+    margin-left: 350px;
+    margin-top: 20px;
+    font-size: 35px;
+}
+
+.btn-filter {
+    background-color: #F7941D;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-filter:hover {
+    background-color: #d8791b;
+}
+
+button,
+button:active,
+button:focus  {
+  border:none;
+}
+
+.job_test_pizda {
+    margin-left: 360px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.forma_big {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-field textarea {
+    font-size: 1.1em; /* Изменяет размер шрифта */
+    font-family: Rubik, sans-serif;
+    padding: 10px; /* Добавляет внутренний отступ */
+    width: 100%; /* Заставляет textarea занимать всю ширину контейнера */
+}
+
+
+.form-field input, .form-field textarea {
+    width: 100%; /* Поля формы занимают всю ширину родительского контейнера */
+    font-size: 1.1em; /* Увеличивает размер текста в полях формы */
+    padding: 10px; /* Добавляет внутренний отступ в полях формы */
+}
+
+.btn-filter {
+    font-size: 1.5em; /* Увеличивает размер текста кнопки */
+    padding: 10px 20px; /* Увеличивает внутренний отступ кнопки */
+}

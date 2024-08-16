@@ -8,11 +8,16 @@
     <div class="chlen_slona">Вакансии</div>
     {% for obj in objects %}
         <div class="conteiner">
-            <a class="boxjob" href="{% url 'job_detail' obj.id %}">
+            <div class="boxjob">
                 <span class="name">{{ obj.name }}</span>
                 <span class="salary">Зарплата: {{ obj.salary }} ₽</span>
                 <span class="city">Город: {{ obj.mesto_raboty }}</span>
-            </a>
+                <form method="post" action="{% url 'apply_for_job' obj.id %}">
+                    {% csrf_token %}
+                    <button type="submit" class="apply-button">Откликнуться</button>
+                </form>
+                <a href="{% url 'job_detail' obj.id %}" class="details-button">Подробнее</a>
+            </div>
         </div>
     {% endfor %}
 {% endblock %}

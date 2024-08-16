@@ -8,15 +8,28 @@
     <div class="chlen_slona">
         ПРОЕКТЫ
     </div>
+
+    <!-- Добавление кнопок фильтрации для пидоров -->
+    <div class="filter-buttons">
+        {% if not request.GET.is_ready or request.GET.is_ready == 'False' %}
+            <a href="{% url 'object_list' %}?is_ready=True" class="btn-filter">Реализованные</a>
+        {% endif %}
+        {% if not request.GET.is_ready or request.GET.is_ready == 'True' %}
+            <a href="{% url 'object_list' %}?is_ready=False" class="btn-filter">На стадии реализации</a>
+        {% endif %}
+    </div>
+
     <div class="objectList">
         {% for obj in objects %}
             <div class="objectList_Item">
-                <span class="popka_negra">{{ obj.name }}</span>
-                {% if obj.image %}
-                    <img src="{{ obj.image.url }}" alt="{{ obj.name }}">
-                {% else %}
-                    <p>Нет изображения</p>
-                {% endif %}
+                <a href="{% url 'object_detail' obj.id %}">
+                    <span class="popka_negra">{{ obj.name }}</span>
+                    {% if obj.image %}
+                        <img src="{{ obj.image.url }}" alt="{{ obj.name }}">
+                    {% else %}
+                        <p>Нет изображения</p>
+                    {% endif %}
+                </a>
             </div>
         {% endfor %}
     </div>
