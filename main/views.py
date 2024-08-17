@@ -66,9 +66,9 @@ def apply_for_job(request, job_id):
         form = ApplicantForm(request.POST)
         if form.is_valid():
             applicant = form.save(commit=False)
-            applicant.job = job  # Убедитесь, что поле 'job' есть в модели заявки (Applicant)
+            applicant.job_name = job.name  # Сохраняем название профессии
             applicant.save()
-            return redirect('job_detail', id=job_id)  # или 'job_id=job_id', в зависимости от URL-шаблона
+            return redirect('job_detail', id=job_id)  # Перенаправляем на страницу вакансии
     else:
         form = ApplicantForm()
 

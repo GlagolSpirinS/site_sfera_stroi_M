@@ -34,3 +34,4 @@ class applicant(models.Model):
     surname = models.CharField(max_length=100)
     number = models.CharField(max_length=100)
     description = models.TextField()
+    job_name = models.CharField(max_length=100, default='SOME STRING')

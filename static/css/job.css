@@ -91,19 +91,31 @@
     pointer-events: auto; /* Убедитесь, что кнопки доступны для клика */
 }
 
+.name_opis {
+    display: flex;
+    flex-direction: column;
+}
+
+.button_pipka {
+    display: flex;
+    flex-direction: row;
+}
+
 .apply-button {
-    background-color: #28a745;
+    font-family: 'Rubik', sans-serif;
+    background-color: #F7941D;
 }
 
 .apply-button:hover {
-    background-color: #218838;
+    background-color: #d8791b;
 }
 
 .details-button {
-    background-color: #007bff;
+    font-family: 'Rubik', sans-serif;
+    background-color: #F7941D;
     margin-left: 10px;
 }
 
 .details-button:hover {
-    background-color: #0056b3;
+    background-color: #d8791b;
 }

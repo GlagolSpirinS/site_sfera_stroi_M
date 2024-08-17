@@ -33,6 +33,5 @@ img {
 }
 
 #description {
-    color: #F7941D;
     white-space: pre-wrap; /* Сохраняет пробелы и разрывы строк */
 }
