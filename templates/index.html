@@ -10,7 +10,7 @@
         <img src="{% static 'img/pizdatiy_fon.png' %}" alt="Background">
         <p>СТРОИТЕЛЬСТВО ОБЪЕКТОВ<br>ЖЕЛЕЗНОДОРОЖНОЙ<br>ИНФРАСТРУКТУРЫ</p>
     </div>
-    <div class="pizda">
+    <div class="lenta">
         НОВОСТНАЯ ЛЕНТА
     </div>
     <div class="objectMain">
@@ -23,7 +23,7 @@
                         {% else %}
                             <p>Нет изображения</p>
                         {% endif %}
-                        <span class="popka_negra">{{ obj.name }}</span>
+                        <span class="name_lenta">{{ obj.name }}</span>
                     </div>
                 {% empty %}
                     <div class="carousel-item">Новостей пока нет</div>

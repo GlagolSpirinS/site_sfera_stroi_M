@@ -7,7 +7,7 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/apply_for_job.css' %}">
     <div class="form-container">
-        <h1 class="chlen_slona">Откликнуться на вакансию: {{ job.name }}</h1>
+        <h1 class="glavnoe_slovo">Откликнуться на вакансию: {{ job.name }}</h1>
         <form class="forma_big" method="post">
             {% csrf_token %}
             <div class="form-field">
@@ -41,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Скрыть все метки в форме
             var labels = document.querySelectorAll('form label');
             labels.forEach(function(label) {
                 label.style.display = 'none';

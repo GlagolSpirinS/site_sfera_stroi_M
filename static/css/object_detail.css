@@ -1,5 +1,5 @@
-.chlen_slona {
-    font-family: Rubik;
+.glavnoe_slovo {
+    font-family: Rubik, serif;
     font-weight: bold;
     color: #F7941D;
     margin-left: 350px;
@@ -18,10 +18,10 @@ img {
 }
 
 .rounded-image {
-    border-radius: 15px; /* Установите радиус закругления, нужный вам */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Пример тени: горизонтальное смещение, вертикальное смещение, размытие, цвет */
-    max-width: 100%; /* Опционально: чтобы изображение не выходило за пределы контейнера */
-    height: auto; /* Опционально: чтобы сохранить пропорции изображения */
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    height: auto;
 }
 
 .opis {
@@ -33,5 +33,5 @@ img {
 }
 
 #description {
-    white-space: pre-wrap; /* Сохраняет пробелы и разрывы строк */
+    white-space: pre-wrap;
 }

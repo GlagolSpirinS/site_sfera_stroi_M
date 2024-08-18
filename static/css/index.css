@@ -27,7 +27,7 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.pizda {
+.lenta {
     color: #F7941D;
     font-family: Rubik;
     font-size: 36px;
@@ -73,13 +73,12 @@
     position: absolute;
 }
 
-/* Стиль для элемента с текстом "Новостей пока нет" */
 .carousel-item p {
-    border: none; /* Убираем рамку */
-    background: none; /* Убираем фон */
+    border: none;
+    background: none;
     padding: 0;
     margin: 0;
-    font-size: 20px; /* Можно настроить размер текста */
+    font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,11 +86,11 @@
     height: 100%;
 }
 
-.popka_negra {
+.name_lenta {
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     position: absolute;
-    font-family: Rubik;
+    font-family: Rubik, serif;
     font-weight: 600;
     font-size: 30px;
     bottom: 20px;

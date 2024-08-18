@@ -1,4 +1,4 @@
-.chlen_slona {
+.glavnoe_slovo {
     font-family: Rubik;
     font-weight: bold;
     color: #F7941D;
@@ -24,12 +24,10 @@
 
 .content {
     font-size: 25px;
-    /*margin-left: 380px;*/
 }
 
 .content2 {
     font-size: 25px;
-    /*margin-left: 380px;*/
     display: flex;
 }
 
