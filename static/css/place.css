@@ -1,16 +1,18 @@
-.chlen_slona {
+.glavnoe_slovo {
     font-family: 'Rubik', sans-serif;
     font-weight: bold;
     color: #F7941D;
-    margin-left: 350px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 20px;
     font-size: 35px;
+    text-align: center;
 }
 
 .objectList {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 20px;
     justify-content: center;
     padding: 20px;
 }
@@ -19,13 +21,13 @@
     flex: 1 1 calc(33.333% - 40px);
     max-width: calc(33.333% - 40px);
     position: relative;
-    min-width: 360px;
-    min-height: 360px;
+    min-width: 280px; /* Изменено для лучшей адаптивности */
+    min-height: 280px; /* Изменено для лучшей адаптивности */
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
     border: 5px solid #F7941D;
     overflow: hidden;
-    transition: transform 0.3s ease-in-out; /* Добавлен переход для карточки */
+    transition: transform 0.3s ease-in-out;
 }
 
 .objectList_Item img {
@@ -35,37 +37,48 @@
     position: absolute;
     top: 0;
     left: 0;
-    transition: transform 0.3s ease-in-out; /* Добавлен переход для изображения */
+    transition: transform 0.3s ease-in-out;
+}
+
+.obobishe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .objectList_Item:hover img {
-    transform: scale(1.1); /* Увеличение изображения при наведении */
+    transform: scale(1.1);
+}
+
+.objectList_Item:hover img {
+    transform: scale(1.1); /* Увеличиваем только изображение */
 }
 
 .objectList_Item:hover {
-    transform: scale(1.05); /* Увеличение карточки при наведении */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Добавление тени при наведении */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Добавляем тень при наведении, но не увеличиваем div */
 }
 
 .popka_negra {
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень для текста */
-    position: absolute; /* Абсолютное позиционирование текста */
-    bottom: 0; /* Расположить текст у нижнего края родительского элемента */
-    left: 50%; /* Центрирование текста по горизонтали */
-    transform: translateX(-50%); /* Выравнивание текста по центру */
-    z-index: 1; /* Помещает текст поверх изображения */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
     font-family: 'Rubik', sans-serif;
     font-weight: 600;
-    font-size: 40px;
-    padding: 10px; /* Добавить отступы, если нужно */
-    box-sizing: border-box; /* Чтобы padding не увеличивал общие размеры элемента */
+    font-size: 24px;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .filter-buttons {
     display: flex;
+    margin-top: 20px;
     justify-content: center;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .btn-filter {
@@ -75,11 +88,37 @@
     font-weight: bold;
     padding: 10px 20px;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 5px;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
 .btn-filter:hover {
     background-color: #d8791b;
+}
+
+@media (max-width: 768px) {
+    .glavnoe_slovo {
+        font-size: 28px;
+    }
+
+    .objectList_Item {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .glavnoe_slovo {
+        font-size: 24px;
+    }
+
+    .objectList_Item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .popka_negra {
+        font-size: 18px;
+    }
 }

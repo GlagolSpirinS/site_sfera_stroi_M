@@ -5,20 +5,21 @@
 {% block content %}
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/place.css' %}">
-    <div class="chlen_slona">
-        ПРОЕКТЫ
-    </div>
+    <div class="obobishe">
+        <div class="glavnoe_slovo">
+            ПРОЕКТЫ
+        </div>
 
     <!-- Добавление кнопок фильтрации для пидоров -->
-    <div class="filter-buttons">
-        {% if not request.GET.is_ready or request.GET.is_ready == 'False' %}
-            <a href="{% url 'object_list' %}?is_ready=True" class="btn-filter">Реализованные</a>
-        {% endif %}
-        {% if not request.GET.is_ready or request.GET.is_ready == 'True' %}
-            <a href="{% url 'object_list' %}?is_ready=False" class="btn-filter">На стадии реализации</a>
-        {% endif %}
+        <div class="filter-buttons">
+            {% if not request.GET.is_ready or request.GET.is_ready == 'False' %}
+                <a href="{% url 'object_list' %}?is_ready=True" class="btn-filter">Реализованные</a>
+            {% endif %}
+            {% if not request.GET.is_ready or request.GET.is_ready == 'True' %}
+                <a href="{% url 'object_list' %}?is_ready=False" class="btn-filter">На стадии реализации</a>
+            {% endif %}
+        </div>
     </div>
-
     <div class="objectList">
         {% for obj in objects %}
             <div class="objectList_Item">

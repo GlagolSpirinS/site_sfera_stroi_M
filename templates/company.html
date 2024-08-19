@@ -6,12 +6,12 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/company.css' %}">
     <div class="glavnoe_slovo">
-        О КОМПАНИИ
+        КОМПАНИЯ
     </div>
-    <div class="all">
-        <div class="gaga">
-            Описание деятельности
-        </div>
+    <div class="glavnoe_slovo2">
+        Описание деятельности компании
+    </div>
+{#    <div class="all">#}
         <div class="content">
             Компания ООО «Сфера-Строй М» была создана 13 января 2021 года в Москве. Основным видом деятельности <br>
             является строительство железных дорог. <br>
@@ -20,10 +20,9 @@
             в планировании и организации всего комплекса работ по проектированию и строительству объектов <br>
             инфраструктуры железных дорог.
         </div>
-        <div style="margin-top: 40px">
-            <div class="gaga">
+        <div class="glavnoe_slovo2">
                 Перечень предоставляемых услуг
-            </div>
+        </div>
             <div class="content2">
                 <img class="spisokrabot" src="{% static 'img/vlad-1-770x515-c-default.jpg' %}" alt="Логотип">
                 <ul>
@@ -34,6 +33,8 @@
                     <li>Cтроительство и ремонт объектов промышленного строительства.</li>
                 </ul>
             </div>
-        </div>
+    <div class="glavnoe_slovo2">
+        Технологическое оснащение
     </div>
+
 {% endblock %}

@@ -7,6 +7,10 @@ def home(request):
     main_objects = ObjectMain.objects.all()
     return render(request, 'index.html', {'objects': main_objects})
 
+def buyer(request):
+    buyer_objects = ObjectMain.objects.all()
+    return render(request, 'buyer.html', {'objects': buyer_objects})
+
 
 def company(request):
     company_objects = ObjectMain.objects.all()

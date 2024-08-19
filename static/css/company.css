@@ -7,6 +7,15 @@
     font-size: 35px;
 }
 
+.glavnoe_slovo2 {
+    font-family: Rubik;
+    font-weight: bold;
+    color: #F7941D;
+    margin-left: 400px;
+    margin-top: 20px;
+    font-size: 35px;
+}
+
 .all {
     font-family: Rubik;
     display: flex;
@@ -23,16 +32,41 @@
 }
 
 .content {
+    margin-top: 10px;
     font-size: 25px;
+    font-family: Rubik;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .content2 {
+    margin-top: 10px;
+    font-family: Rubik;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     font-size: 25px;
     display: flex;
 }
 
+.spisok_name {
+    margin-left: 420px;
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 20px;
+}
+
 .spisokrabot {
     width: 350px;
+    height: 350px;
+    border-radius: 15px;
+    background-color: Snow;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.spisokrabot2 {
+    width: 450px;
     height: 350px;
     border-radius: 15px;
     background-color: Snow;

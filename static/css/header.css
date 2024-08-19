@@ -1,8 +1,11 @@
 .sfera_logo-1 {
     position: static;
-    margin-left: 350px;
-    width: 500px;
-    height: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 80%;
+    max-width: 500px;
+    height: auto;
 }
 
 .navbar {
@@ -11,14 +14,48 @@
     height: 70px;
     display: flex;
     justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
 }
 
 .navbar a {
-    display: flex;
-    align-items: center;
+    display: block;
     font-family: "Rubik";
     font-weight: 600;
-    margin-right: 78px;
+    margin: 10px 20px;
     color: white;
     text-decoration: none;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .navbar a {
+        margin: 10px 10px;
+    }
+
+    .sfera_logo-1 {
+        width: 60%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        font-size: 16px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        margin: 8px 0;
+    }
+
+    .sfera_logo-1 {
+        width: 80%;
+    }
 }

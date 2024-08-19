@@ -16,6 +16,7 @@ urlpatterns = [
     path('company', views.company, name='company'),
     path('job/<int:id>/', views.job_detail, name='job_detail'),
     path('place', views.place, name='place'),
+    path('buyer', views.buyer, name='buyer'),
     path('partner', views.partner, name='partner'),
     path('contact', views.contact, name='contact'),
     path('admin/', admin.site.urls, name='admin'),
