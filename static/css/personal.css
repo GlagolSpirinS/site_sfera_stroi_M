@@ -23,7 +23,28 @@
     align-items: center;
 }
 
-/*ШРИФТ ГОВНО*/
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .glavnoe_slovo {
+        margin-left: 0;
+        margin-top: 20px;
+        font-size: 5vw;
+        text-align: center;
+    }
+
+    .manager_spisok {
+        margin-left: 0; /* Центрируем список на мобильных устройствах */
+        padding: 0 20px; /* Добавляем отступы по бокам для лучшей читаемости */
+    }
+
+    .manager_item {
+        justify-content: center; /* Центрируем элементы внутри блока на мобильных устройствах */
+        text-align: center; /* Центрируем текст внутри блока */
+        margin-top: 20px;
+        padding: 20px;
+        font-size: 4vw; /* Увеличиваем адаптивность размера текста */
+    }
+}
 
 .manager_item span {
     font-family: Rubik, serif;

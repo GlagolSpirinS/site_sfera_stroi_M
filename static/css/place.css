@@ -1,12 +1,9 @@
 .glavnoe_slovo {
-    font-family: 'Rubik', sans-serif;
+    font-family: Rubik, serif;
     font-weight: bold;
     color: #F7941D;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
+    margin-left: 350px;
     font-size: 35px;
-    text-align: center;
 }
 
 .objectList {
@@ -14,7 +11,7 @@
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    padding: 20px;
+    /*padding: 20px;*/
 }
 
 .objectList_Item {
@@ -42,8 +39,9 @@
 
 .obobishe {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    align-items: center; /* Центрируем элементы по вертикали */
+    margin-right: 350px;
 }
 
 .objectList_Item:hover img {
@@ -79,6 +77,28 @@
     justify-content: center;
     margin-bottom: 20px;
     flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .glavnoe_slovo {
+        margin-left: 0; /* Сбрасываем margin-left */
+        margin-top: 20px; /* Сохраняем отступ сверху */
+        font-size: 5vw; /* Адаптируем размер шрифта */
+        text-align: center; /* Центрируем текст на мобильных устройствах */
+    }
+}
+
+@media (max-width: 768px) {
+    .obobishe {
+        flex-direction: column; /* Ставим элементы в колонку */
+        margin-right: 0; /* Убираем отступ справа для мобильных */
+    }
+
+    .filter-buttons {
+        margin-top: 10px; /* Отступ сверху, чтобы кнопки были под заголовком */
+        width: 100%; /* Растягиваем кнопки на всю ширину */
+        justify-content: center; /* Центрируем кнопки по горизонтали */
+    }
 }
 
 .btn-filter {

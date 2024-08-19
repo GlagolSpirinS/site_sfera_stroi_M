@@ -7,6 +7,16 @@
     font-size: 35px;
 }
 
+/* Адаптивные стили для glavnoe_slovo */
+@media (max-width: 768px) {
+    .glavnoe_slovo {
+        margin-left: 0;
+        margin-top: 20px;
+        font-size: 5vw;
+        text-align: center;
+    }
+}
+
 .conteiner {
     display: flex;
     align-items: center;
@@ -27,6 +37,10 @@
     overflow: hidden;
     background-color: #fff;
     transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.button_pipka {
+    display: flex;
 }
 
 .name {
@@ -75,11 +89,6 @@
     flex-direction: column;
 }
 
-.button_pipka {
-    display: flex;
-    flex-direction: row;
-}
-
 .apply-button {
     font-family: 'Rubik', sans-serif;
     background-color: #F7941D;
@@ -97,4 +106,26 @@
 
 .details-button:hover {
     background-color: #d8791b;
+}
+
+/* Изменения в layout на мобильных устройствах */
+@media (max-width: 768px) {
+    .boxjob {
+        min-width: 90%; /* Расширение карточки на мобильных устройствах */
+    }
+
+    .button_pipka {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .details-button {
+        margin-left: 0;
+        margin-top: 10px; /* Отступ сверху вместо отступа слева */
+    }
+
+    .apply-button, .details-button {
+        width: 100%; /* Кнопки занимают всю ширину */
+        box-sizing: border-box; /* Учитываем отступы и границы в размере кнопки */
+    }
 }
