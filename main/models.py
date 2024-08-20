@@ -2,10 +2,12 @@ from django.db import models
 class ObjectMain(models.Model):
     name = models.CharField(max_length=100)
     image = models.ImageField(upload_to='images/')
+
 class Managers(models.Model):
     surname = models.CharField(max_length=100)
     name = models.CharField(max_length=100)
     role = models.CharField(max_length=100)
+
 class Jobs(models.Model):
     name = models.CharField(max_length=100)
     salary = models.CharField(max_length=100)
@@ -23,7 +25,7 @@ class Object(models.Model):
     name = models.CharField(max_length=100)
     image = models.ImageField(upload_to='objectImg/')
     description = models.TextField()
-    is_ready = models.BooleanField(default=False)  # Новое булевое поле
+    is_ready = models.BooleanField(default=False)
 
 class Partner(models.Model):
     name = models.CharField(max_length=100)

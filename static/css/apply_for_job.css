@@ -1,3 +1,4 @@
+/* Стили по умолчанию */
 .filter-buttons {
     display: flex;
     justify-content: center;
@@ -8,9 +9,9 @@
     font-family: Rubik, serif;
     font-weight: bold;
     color: #F7941D;
-    margin-left: 350px;
-    margin-top: 20px;
+    margin: 20px;
     font-size: 35px;
+    text-align: center; /* Центрирование текста */
 }
 
 .btn-filter {
@@ -30,8 +31,8 @@
 
 button,
 button:active,
-button:focus  {
-  border:none;
+button:focus {
+    border: none;
 }
 
 .forma_big {
@@ -42,21 +43,34 @@ button:focus  {
     align-items: center;
 }
 
-.form-field textarea {
+.form-field textarea,
+.form-field input {
     font-size: 1.1em;
     font-family: Rubik, sans-serif;
     padding: 10px;
-    width: 100%;
+    /*width: 100%;*/
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень */
 }
 
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    .glavnoe_slovo {
+        font-size: 25px;
+        margin: 10px; /* Уменьшаем отступы */
+    }
 
-.form-field input, .form-field textarea {
-    width: 100%;
-    font-size: 1.1em;
-    padding: 10px;
-}
+    .btn-filter {
+        font-size: 1.2em;
+        padding: 10px 15px; /* Уменьшаем отступы для кнопок */
+    }
 
-.btn-filter {
-    font-size: 1.5em;
-    padding: 10px 20px;
+    .forma_big {
+        padding: 10px; /* Уменьшаем внутренние отступы формы */
+    }
+
+    .form-field textarea,
+    .form-field input {
+        font-size: 1em; /* Уменьшаем размер шрифта */
+    }
 }

@@ -6,18 +6,29 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/job_detail.css' %}">
     <div class="conteiner">
-        <div class="boxjob">
-            <snap class="name">{{ job.name }}</snap>
-            <span class="salary"><strong>Зарплата:</strong> {{ job.salary }} ₽</span>
-            <snap class="city"><strong>Требуемый опыт работы:</strong> {{ job.trebuyemyy_opyt_raboty }}</snap>
-            <snap class="city"><strong>Занятость:</strong> {{ job.zanyatost }}</snap>
-            <snap class="city"><strong>График:</strong> {{ job.grafik }}</snap>
-            <snap class="city"><strong>Удалённая работа:</strong> {{ job.udalonnayarabota|yesno:"Да,Нет" }}</snap>
-            <snap class="city"><strong>Описание:</strong> {{ job.kratkoye_opisaniye }}</snap>
-            <snap class="city"><strong>Условия:</strong> {{ job.usloviya }}</snap>
-            <snap class="city"><strong>Требования:</strong> {{ job.trebovaniya }}</snap>
-            <snap class="city"><strong>Обязанности:</strong> {{ job.obyazannosti }}</snap>
-            <snap class="city"><strong>Место работы:</strong> {{ job.mesto_raboty }}</snap>
-        </div>
+<div class="boxjob">
+    <div class="name">{{ job.name }}</div>
+
+    <div class="salary"><strong>Зарплата:</strong> {{ job.salary }} ₽</div>
+
+    <div class="city"><strong>Требуемый опыт работы:</strong> {{ job.trebuyemyy_opyt_raboty }}</div>
+
+    <div class="city"><strong>Занятость:</strong> {{ job.zanyatost }}</div>
+
+    <div class="city"><strong>График:</strong> {{ job.grafik }}</div>
+
+    <div class="city"><strong>Удалённая работа:</strong> {{ job.udalonnayarabota|yesno:"Да,Нет" }}</div>
+
+    <div class="city"><strong>Описание:</strong> {{ job.kratkoye_opisaniye }}</div>
+
+    <div class="city"><strong>Условия:</strong> {{ job.usloviya }}</div>
+
+    <div class="city"><strong>Требования:</strong> {{ job.trebovaniya }}</div>
+
+    <div class="city"><strong>Обязанности:</strong> {{ job.obyazannosti }}</div>
+
+    <div class="city"><strong>Место работы:</strong> {{ job.mesto_raboty }}</div>
+</div>
+
     </div>
 {% endblock %}

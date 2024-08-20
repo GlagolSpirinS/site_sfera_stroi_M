@@ -11,18 +11,42 @@
     <title>{% block title %}Сайт{% endblock %}</title>
 </head>
 <body>
-    <a href="{% url 'index' %}">
-        <img class="sfera_logo-1" src="{% static 'img/sfera_logo-1.svg' %}" alt="Логотип">
-    </a>
-    <div class="navbar">
+    <div class="header-container">
+        <!-- Кнопка гамбургер -->
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
+        <a href="{% url 'index' %}">
+            <img class="sfera_logo-1" src="{% static 'img/sfera_logo-1.svg' %}" alt="Логотип">
+        </a>
+    </div>
+
+    <!-- Навигационное меню -->
+    <div class="navbar" id="navbar">
         <a href="{% url 'place' %}">ПРОЕКТЫ</a>
         <a href="{% url 'partner' %}">ПАРТНЁРЫ</a>
         <a href="{% url 'job' %}">ВАКАНСИИ</a>
         <a href="{% url 'personal' %}">РУКОВОДСТВО</a>
-{#        <a href="{% url 'buyer' %}">ЗАКУПКИ</a>#}
         <a href="{% url 'contact' %}">КОНТАКТЫ</a>
         <a href="{% url 'company' %}">КОМПАНИЯ</a>
     </div>
+
     {% block content %}{% endblock %}
+
+    <script>
+        document.getElementById('menu-toggle').onclick = function() {
+            var navbar = document.getElementById('navbar');
+            navbar.classList.toggle('active');
+        };
+
+        // Закрытие меню при клике вне его
+        document.addEventListener('click', function(event) {
+            var navbar = document.getElementById('navbar');
+            var menuToggle = document.getElementById('menu-toggle');
+            if (!navbar.contains(event.target) && !menuToggle.contains(event.target)) {
+                navbar.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
