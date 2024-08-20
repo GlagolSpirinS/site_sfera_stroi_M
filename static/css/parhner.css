@@ -69,3 +69,41 @@
         gap: 5px; /* Уменьшаем расстояние до минимума */
     }
 }
+
+/* Адаптация стилей для 2K и 4K экранов */
+@media (min-width: 2560px) {
+    .glavnoe_slovo {
+        margin-left: 500px;
+        margin-top: 40px;
+        font-size: 50px;
+    }
+
+    .partner-item {
+        margin-top: 60px;
+        width: auto;
+        height: auto;
+    }
+
+    .partner-img {
+        width: 80%;
+    }
+}
+
+/* Адаптация стилей для 4K экранов */
+@media (min-width: 3840px) {
+    .glavnoe_slovo {
+        margin-left: 700px;
+        margin-top: 60px;
+        font-size: 70px;
+    }
+
+    .partner-item {
+        margin-top: 80px;
+        width: auto;
+        height: auto;
+    }
+
+    .partner-img {
+        width: 100%;
+    }
+}

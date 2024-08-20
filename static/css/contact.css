@@ -119,3 +119,72 @@
     background-color: #FFA726;
     transform: scale(1.1);
 }
+
+/* Адаптация для 2K экранов */
+@media (min-width: 2560px) {
+    .glavnoe_slovo {
+        margin-left: 500px;
+        margin-top: 40px;
+        font-size: 50px;
+    }
+
+    .flex-container {
+        font-size: 35px;
+        height: 400px;
+    }
+
+    .first {
+        margin-left: 500px;
+        height: 400px;
+    }
+
+    .first div {
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+
+    .second {
+        height: 400px;
+    }
+
+    .map_but {
+        font-size: 35px;
+        padding: 15px 30px;
+        max-width: 350px;
+    }
+}
+
+/* Адаптация для 4K экранов */
+@media (min-width: 3840px) {
+    .glavnoe_slovo {
+        margin-left: 700px;
+        margin-top: 60px;
+        font-size: 70px;
+    }
+
+    .flex-container {
+        font-size: 45px;
+        height: 500px;
+    }
+
+    .first {
+        margin-left: 700px;
+        height: 500px;
+    }
+
+    .first div {
+        margin-left: 40px;
+        margin-top: 40px;
+    }
+
+    .second {
+        height: 500px;
+    }
+
+    .map_but {
+        font-size: 45px;
+        padding: 20px 40px;
+        max-width: 450px;
+    }
+}
+

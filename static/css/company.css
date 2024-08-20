@@ -1,5 +1,13 @@
+/* Основные стили для контейнера и заголовков */
+.container {
+    font-family: Rubik, sans-serif;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .glavnoe_slovo {
-    font-family: Rubik;
+    font-family: Rubik, serif;
     font-weight: bold;
     color: #F7941D;
     margin-left: 350px;
@@ -7,79 +15,116 @@
     font-size: 35px;
 }
 
-.glavnoe_slovo2 {
-    font-family: Rubik;
+.subtitle {
     font-weight: bold;
     color: #F7941D;
-    margin-left: 400px;
-    margin-top: 20px;
-    font-size: 35px;
+    font-size: 30px;
+    margin: 30px 0 15px;
 }
 
-.all {
-    font-family: Rubik;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+.content, .technology-section, .service-section {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
 }
 
-.gaga {
-    font-weight: bold;
-    font-size: 33px;
-    display: flex;
-    justify-content: center;
-}
-
-.content {
-    margin-top: 10px;
-    font-size: 25px;
-    font-family: Rubik;
+.service-section {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.content2 {
-    margin-top: 10px;
-    font-family: Rubik;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
-    display: flex;
-}
-
-.spisok_name {
-    margin-left: 420px;
-    font-family: 'Rubik';
-    font-weight: 400;
-    font-size: 20px;
-}
-
-.spisokrabot {
+.service-image {
     width: 350px;
     height: 350px;
     border-radius: 15px;
     background-color: Snow;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
 }
 
-.spisokrabot2 {
-    width: 450px;
-    height: 350px;
-    border-radius: 15px;
-    background-color: Snow;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-ul, li {
+.service-list {
+    list-style: none;
+    padding: 0;
     margin: 0;
+    font-size: 20px;
 }
 
-ul li {
-    color: #F7941D;
-}
-ul li:first-line  {
+/*.service-list li {*/
+/*    margin-bottom: 10px;*/
+/*    color: #F7941D;*/
+/*}*/
+
+.service-list li::before {
+    content: "• ";
     color: black;
+    font-weight: bold;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+/* Адаптация для 2K экранов */
+@media (min-width: 2560px) {
+    .glavnoe_slovo {
+        margin-left: 500px;
+        margin-top: 40px;
+        font-size: 50px;
+    }
+
+    .subtitle {
+        font-size: 40px;
+        margin: 40px 0 20px;
+    }
+
+    .content, .technology-section, .service-section {
+        font-size: 22px;
+        line-height: 1.8;
+    }
+
+    .service-section {
+        align-items: flex-start;
+    }
+
+    .service-list {
+        font-size: 22px;
+    }
+
+    .service-image {
+        width: 450px;
+        height: 450px;
+    }
+}
+
+/* Адаптация для 4K экранов */
+@media (min-width: 3840px) {
+    .glavnoe_slovo {
+        margin-left: 700px;
+        margin-top: 60px;
+        font-size: 70px;
+    }
+
+    .subtitle {
+        font-size: 60px;
+        margin: 60px 0 30px;
+    }
+
+    .content, .technology-section, .service-section {
+        font-size: 28px;
+        line-height: 1.8;
+    }
+
+    .service-section {
+        align-items: flex-start;
+    }
+
+    .service-list {
+        font-size: 28px;
+    }
+
+    .service-image {
+        width: 600px;
+        height: 600px;
+    }
 }

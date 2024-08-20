@@ -135,3 +135,71 @@
         left: 10px;
     }
 }
+
+/* Адаптация стилей для 2K и 4K экранов */
+@media (min-width: 2560px) {
+    .blur {
+        height: 450px;
+        font-size: 24px;
+    }
+
+    .blur p {
+        margin-left: 600px;
+        font-size: 72px;
+    }
+
+    .lenta {
+        font-size: 54px;
+        margin-left: 500px;
+        margin-top: 30px;
+    }
+
+    .carousel-container {
+        width: 2000px;
+    }
+
+    .carousel-item {
+        min-width: 500px;
+        min-height: 500px;
+    }
+
+    .name_lenta {
+        font-size: 42px;
+        bottom: 30px;
+        left: 30px;
+    }
+}
+
+/* Адаптация стилей для 4K экранов */
+@media (min-width: 3840px) {
+    .blur {
+        height: 600px;
+        font-size: 32px;
+    }
+
+    .blur p {
+        margin-left: 800px;
+        font-size: 96px;
+    }
+
+    .lenta {
+        font-size: 72px;
+        margin-left: 700px;
+        margin-top: 40px;
+    }
+
+    .carousel-container {
+        width: 3000px;
+    }
+
+    .carousel-item {
+        min-width: 700px;
+        min-height: 700px;
+    }
+
+    .name_lenta {
+        font-size: 54px;
+        bottom: 40px;
+        left: 40px;
+    }
+}

@@ -55,3 +55,51 @@
 .role {
     color: #abacac;
 }
+
+/* Адаптация стилей для 2K и 4K экранов */
+@media (min-width: 2560px) {
+    .glavnoe_slovo {
+        margin-left: 500px;
+        margin-top: 40px;
+        font-size: 50px;
+    }
+
+    .manager_spisok {
+        margin-left: 500px;
+        gap: 60px;
+    }
+
+    .manager_item {
+        padding: 20px;
+        margin-top: 30px;
+        font-size: 35px;
+    }
+
+    .manager_item span {
+        font-size: 40px;
+    }
+}
+
+/* Адаптация стилей для 4K экранов */
+@media (min-width: 3840px) {
+    .glavnoe_slovo {
+        margin-left: 700px;
+        margin-top: 60px;
+        font-size: 70px;
+    }
+
+    .manager_spisok {
+        margin-left: 700px;
+        gap: 80px;
+    }
+
+    .manager_item {
+        padding: 30px;
+        margin-top: 40px;
+        font-size: 45px;
+    }
+
+    .manager_item span {
+        font-size: 50px;
+    }
+}
