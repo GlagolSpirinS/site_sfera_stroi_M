@@ -7,16 +7,6 @@
     font-size: 35px;
 }
 
-/* Адаптивные стили для glavnoe_slovo */
-@media (max-width: 768px) {
-    .glavnoe_slovo {
-        margin-left: 0;
-        margin-top: 20px;
-        font-size: 5vw;
-        text-align: center;
-    }
-}
-
 img {
     margin-left: 350px;
     width: 600px;
@@ -47,6 +37,17 @@ img {
     white-space: pre-wrap;
 }
 
+
+/* Адаптивные стили для glavnoe_slovo */
+@media (max-width: 768px) {
+    .glavnoe_slovo {
+        margin-left: 0;
+        margin-top: 20px;
+        font-size: 5vw;
+        text-align: center;
+    }
+}
+
 /* Адаптивные стили для мобильных устройств */
 @media (max-width: 768px) {
     .blur {
@@ -69,5 +70,45 @@ img {
 
     #description {
         white-space: normal;
+    }
+}
+
+/* Адаптивные стили для экранов с разрешением 2К */
+@media (min-width: 2560px) and (max-width: 3839px) {
+    .glavnoe_slovo {
+        margin-left: 450px;  /* Увеличение отступа для 2К экрана */
+        margin-top: 30px;
+        font-size: 50px;  /* Увеличение размера шрифта */
+    }
+
+    img {
+        margin-left: 450px;
+        width: 800px;  /* Увеличение размера изображения */
+        height: 683px;
+    }
+
+    .opis {
+        margin-left: 60px;
+        font-size: 35px;  /* Увеличение размера шрифта */
+    }
+}
+
+/* Адаптивные стили для экранов с разрешением 4К */
+@media (min-width: 3840px) {
+    .glavnoe_slovo {
+        margin-left: 550px;  /* Увеличение отступа для 4К экрана */
+        margin-top: 40px;
+        font-size: 65px;  /* Увеличение размера шрифта */
+    }
+
+    img {
+        margin-left: 550px;
+        width: 1200px;  /* Увеличение размера изображения */
+        height: 1024px;
+    }
+
+    .opis {
+        margin-left: 80px;
+        font-size: 45px;  /* Увеличение размера шрифта */
     }
 }
