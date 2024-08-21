@@ -22,10 +22,14 @@
     min-height: 280px; /* Изменено для лучшей адаптивности */
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
-    border: 5px solid #F7941D;
+    /*border: 5px solid #F7941D;*/
     overflow: hidden;
+    border-radius: 15px;
     transition: transform 0.3s ease-in-out;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Более заметная тень со всех сторон */
 }
+
+
 
 .objectList_Item img {
     width: 100%;

@@ -11,6 +11,19 @@
     <title>{% block title %}Сайт{% endblock %}</title>
 </head>
 <body>
+
+    <style>
+        body {
+        /* Устанавливаем фоновое изображение */
+        {#background-color: rgba(255, 0, 0, 0.77); /* Белый цвет с 50% прозрачностью */#}
+            background-image: url("{% static 'img/i.png' %}");
+            background-size: cover; /* Покрывает весь экран */
+            background-position: center; /* Центрируем изображение */
+            background-repeat: no-repeat; /* Избегаем повторения изображения */
+    }
+    </style>
+
+
     <div class="header-container">
         <!-- Кнопка гамбургер -->
         <div class="menu-toggle" id="menu-toggle">
