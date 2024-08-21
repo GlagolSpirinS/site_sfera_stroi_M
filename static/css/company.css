@@ -61,11 +61,6 @@
     font-size: 20px;
 }
 
-/*.service-list li {*/
-/*    margin-bottom: 10px;*/
-/*    color: #F7941D;*/
-/*}*/
-
 .service-list li::before {
     content: "• ";
     color: black;
