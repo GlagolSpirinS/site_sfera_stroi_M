@@ -1,7 +1,7 @@
 .glavnoe_slovo {
     font-family: Rubik, serif;
-    font-weight: bold;
-    color: #F7941D;
+    font-weight: 600;
+    color: #414042;
     margin-left: 350px;
     margin-top: 20px;
     font-size: 35px;
@@ -90,8 +90,8 @@
 .map_but {
     display: inline-block;
     padding: 10px 20px;
-    color: black;
-    background-color: #F7941D;
+    color: white;
+    background-color: #414042;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.3s;
@@ -116,7 +116,7 @@
 }
 
 .map_but:hover {
-    background-color: #FFA726;
+    background-color: #6a666a;
     transform: scale(1.1);
 }
 

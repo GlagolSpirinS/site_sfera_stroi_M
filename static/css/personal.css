@@ -1,8 +1,8 @@
 /* Основные стили для текста и элементов */
 .glavnoe_slovo {
     font-family: Rubik, serif;
-    font-weight: bold;
-    color: #F7941D;
+    font-weight: 600;
+    color: #414042;
     margin-left: 350px;
     margin-top: 20px;
     font-size: 35px;
@@ -16,7 +16,7 @@
 }
 
 .manager_item {
-    border: 0 solid #F7941D;
+    border: 0 solid #414042;
     padding: 10px;
     margin-top: 20px;
     box-sizing: border-box;
@@ -54,7 +54,7 @@
 }
 
 .role {
-    color: #abacac;
+    color: #000000;
 }
 
 /* Адаптация стилей для 2K и 4K экранов */

@@ -1,7 +1,7 @@
 .glavnoe_slovo {
     font-family: Rubik, serif;
-    font-weight: bold;
-    color: #F7941D;
+    font-weight: 600;
+    color: #414042;
     margin-left: 350px;
     margin-top: 20px;
     font-size: 35px;
@@ -91,21 +91,21 @@
 
 .apply-button {
     font-family: 'Rubik', sans-serif;
-    background-color: #F7941D;
+    background-color: #414042;
 }
 
 .apply-button:hover {
-    background-color: #d8791b;
+    background-color: #717073;
 }
 
 .details-button {
     font-family: 'Rubik', sans-serif;
-    background-color: #F7941D;
+    background-color: #414042;
     margin-left: 10px;
 }
 
 .details-button:hover {
-    background-color: #d8791b;
+    background-color: #7c7a7e;
 }
 
 /* Изменения в layout на мобильных устройствах */

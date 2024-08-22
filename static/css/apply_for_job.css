@@ -7,18 +7,18 @@
 
 .glavnoe_slovo {
     font-family: Rubik, serif;
-    font-weight: bold;
-    color: #F7941D;
+    font-weight: 600;
+    color: #414042;
     margin: 20px;
     font-size: 35px;
     text-align: center; /* Центрирование текста */
 }
 
 .btn-filter {
-    background-color: #F7941D;
+    background-color: #414042;
     color: white;
     font-family: 'Rubik', sans-serif;
-    font-weight: bold;
+    font-weight: 600;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -26,7 +26,7 @@
 }
 
 .btn-filter:hover {
-    background-color: #d8791b;
+    background-color: #414042;
 }
 
 button,

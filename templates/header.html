@@ -13,14 +13,36 @@
 <body>
 
     <style>
+        /* Устанавливаем базовые стили для HTML и BODY */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-        /* Устанавливаем фоновое изображение */
-        {#background-color: rgba(255, 0, 0, 0.77); /* Белый цвет с 50% прозрачностью */#}
             background-image: url("{% static 'img/i.png' %}");
-            background-size: cover; /* Покрывает весь экран */
-            background-position: center; /* Центрируем изображение */
-            background-repeat: no-repeat; /* Избегаем повторения изображения */
-    }
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Закрепляем фон, чтобы он не прокручивался */
+        }
+
+        /* Для экранов с разрешением 2K (2048px и выше по ширине) */
+        @media screen and (min-width: 2048px) {
+            body {
+                background-image: url("{% static 'img/i.png' %}"); /* Специальное изображение для 2K */
+                background-size: cover;
+            }
+        }
+
+        /* Для экранов с разрешением 4K (3840px и выше по ширине) */
+        @media screen and (min-width: 3840px) {
+            body {
+                background-image: url("{% static 'img/i.png' %}"); /* Специальное изображение для 4K */
+                background-size: cover;
+            }
+        }
     </style>
 
 
