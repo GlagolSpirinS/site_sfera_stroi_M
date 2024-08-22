@@ -7,22 +7,26 @@
     font-size: 35px;
 }
 
-img {
-    margin-left: 350px;
-    width: 600px;
-    height: 512px;
-}
-
 .blur {
     display: flex;
     flex-direction: row;
 }
 
-.rounded-image {
+.image-container {
+    margin-left: 350px;
+    width: 600px;
     border-radius: 15px;
+    height: 338px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Избегаем выхода изображения за границы контейнера */
+}
+
+.rounded-image {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    object-fit: cover; /* Изображение заполняет контейнер полностью */
 }
 
 .opis {
@@ -37,7 +41,6 @@ img {
     white-space: pre-wrap;
 }
 
-
 /* Адаптивные стили для glavnoe_slovo */
 @media (max-width: 768px) {
     .glavnoe_slovo {
@@ -46,20 +49,24 @@ img {
         font-size: 5vw;
         text-align: center;
     }
-}
 
-/* Адаптивные стили для мобильных устройств */
-@media (max-width: 768px) {
     .blur {
-        flex-direction: column; /* Ориентация по вертикали для мобильных устройств */
+        flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
-    .rounded-image {
+    .image-container {
         margin-left: 0;
-        margin-bottom: 20px; /* Отступ снизу для разделения с текстом */
-        width: 90%; /* Уменьшение ширины для лучшего отображения на мобильных устройствах */
+        margin-bottom: 20px;
+        width: 90%; /* Уменьшение ширины для мобильных устройств */
+        height: 200px; /* Примерная высота для мобильных устройств */
+    }
+
+    .rounded-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Изображение заполняет контейнер полностью */
     }
 
     .opis {
@@ -69,46 +76,44 @@ img {
     }
 
     #description {
-        white-space: normal;
+        white-space: normal; /* Автоматический перенос строк */
     }
 }
 
-/* Адаптивные стили для экранов с разрешением 2К */
 @media (min-width: 2560px) and (max-width: 3839px) {
     .glavnoe_slovo {
-        margin-left: 450px;  /* Увеличение отступа для 2К экрана */
+        margin-left: 450px;
         margin-top: 30px;
-        font-size: 50px;  /* Увеличение размера шрифта */
+        font-size: 50px;
     }
 
-    img {
+    .image-container {
         margin-left: 450px;
-        width: 800px;  /* Увеличение размера изображения */
-        height: 683px;
+        width: 800px;
+        height: 409px;
     }
 
     .opis {
         margin-left: 60px;
-        font-size: 35px;  /* Увеличение размера шрифта */
+        font-size: 35px;
     }
 }
 
-/* Адаптивные стили для экранов с разрешением 4К */
 @media (min-width: 3840px) {
     .glavnoe_slovo {
-        margin-left: 550px;  /* Увеличение отступа для 4К экрана */
+        margin-left: 550px;
         margin-top: 40px;
-        font-size: 65px;  /* Увеличение размера шрифта */
+        font-size: 65px;
     }
 
-    img {
+    .image-container {
         margin-left: 550px;
-        width: 1200px;  /* Увеличение размера изображения */
+        width: 1200px;
         height: 1024px;
     }
 
     .opis {
         margin-left: 80px;
-        font-size: 45px;  /* Увеличение размера шрифта */
+        font-size: 45px;
     }
 }

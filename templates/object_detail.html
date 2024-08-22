@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="{% static 'css/object_detail.css' %}">
     <h1 class="glavnoe_slovo">{{ obj.name }}</h1>
     <div class="blur">
-        {% if obj.image %}
-            <img class="rounded-image" src="{{ obj.image.url }}" alt="{{ obj.name }}">
-        {% endif %}
+        <div class="image-container">
+            {% if obj.image %}
+                <img class="rounded-image" src="{{ obj.image.url }}" alt="{{ obj.name }}">
+            {% endif %}
+        </div>
         <div class="opis">
             <p id="description">{{ obj.description }}</p>
         </div>

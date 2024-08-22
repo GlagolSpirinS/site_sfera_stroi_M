@@ -26,6 +26,13 @@ class Object(models.Model):
     image = models.ImageField(upload_to='objectImg/')
     description = models.TextField()
     is_ready = models.BooleanField(default=False)
+    image1 = models.ImageField(upload_to='objectImg/', default='path/image.jpeg')
+    image2 = models.ImageField(upload_to='objectImg/', default='path/image.jpeg')
+    image3 = models.ImageField(upload_to='objectImg/', default='path/image.jpeg')
+    image4 = models.ImageField(upload_to='objectImg/', default='path/image.jpeg')
+    image5 = models.ImageField(upload_to='objectImg/', default='path/image.jpeg')
+    image6 = models.ImageField(upload_to='objectImg/', default='path/image.jpeg')
+    image7 = models.ImageField(upload_to='objectImg/', default='path/image.jpeg')
 
 class Partner(models.Model):
     name = models.CharField(max_length=100)
