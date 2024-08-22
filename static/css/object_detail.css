@@ -118,3 +118,43 @@
         font-size: 45px;
     }
 }
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 30px auto;
+    width: 90%;
+}
+
+.image-gallery img {
+    width: calc(25% - 10px); /* Устанавливаем ширину изображения с учетом промежутка */
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover; /* Изображение заполняет контейнер полностью */
+    height: 450px; /* Устанавливаем высоту изображений */
+}
+
+/* Адаптивные стили для image-gallery */
+@media (max-width: 768px) {
+    .image-gallery img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 2560px) and (max-width: 3839px) {
+    .image-gallery img {
+        width: calc(25% - 15px);
+        height: 200px;
+    }
+}
+
+@media (min-width: 3840px) {
+    .image-gallery img {
+        width: calc(25% - 20px);
+        height: 300px;
+    }
+}
