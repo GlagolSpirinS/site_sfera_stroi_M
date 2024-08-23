@@ -22,17 +22,19 @@ class Jobs(models.Model):
     mesto_raboty = models.CharField(max_length=100, default='SOME STRING')
 
 class Object(models.Model):
-    name = models.CharField(max_length=100)
-    image = models.ImageField(upload_to='objectImg/')
-    description = models.TextField()
+    name = models.CharField(max_length=100, blank=True, null=True)
+    image = models.ImageField(upload_to='objectImg/', blank=True, null=True)
+    description = models.TextField(blank=True, null=True)
     is_ready = models.BooleanField(default=False)
-    image1 = models.ImageField(upload_to='objectImg/', default='path/image.jpeg')
-    image2 = models.ImageField(upload_to='objectImg/', default='path/image.jpeg')
-    image3 = models.ImageField(upload_to='objectImg/', default='path/image.jpeg')
-    image4 = models.ImageField(upload_to='objectImg/', default='path/image.jpeg')
-    image5 = models.ImageField(upload_to='objectImg/', default='path/image.jpeg')
-    image6 = models.ImageField(upload_to='objectImg/', default='path/image.jpeg')
-    image7 = models.ImageField(upload_to='objectImg/', default='path/image.jpeg')
+    image1 = models.ImageField(upload_to='objectImg/', blank=True, null=True)
+    image2 = models.ImageField(upload_to='objectImg/', blank=True, null=True)
+    image3 = models.ImageField(upload_to='objectImg/', blank=True, null=True)
+    image4 = models.ImageField(upload_to='objectImg/', blank=True, null=True)
+    image5 = models.ImageField(upload_to='objectImg/', blank=True, null=True)
+    image6 = models.ImageField(upload_to='objectImg/', blank=True, null=True)
+    image7 = models.ImageField(upload_to='objectImg/', blank=True, null=True)
+    image8 = models.ImageField(upload_to='objectImg/', blank=True, null=True)
+
 
 class Partner(models.Model):
     name = models.CharField(max_length=100)

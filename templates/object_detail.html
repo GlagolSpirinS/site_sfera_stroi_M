@@ -17,22 +17,35 @@
         </div>
     </div>
 
-    {% if obj.image1.url != "/media/path/image.jpg" or obj.image2.url != "/media/path/image.jpg" or obj.image3.url != "/media/path/image.jpg" or obj.image4.url != "/media/path/image.jpg" %}
+    {% if obj.image1.url or obj.image2.url or obj.image3.url or obj.image4.url or obj.image5.url or obj.image6.url or obj.image7.url or obj.image8.url%}
         <div class="image-gallery">
-            {% if obj.image1.url != "/media/path/image.jpg" %}
+            {% if obj.image1 and obj.image1.url%}
                 <img class="gallery-image" src="{{ obj.image1.url }}" alt="{{ obj.name }}">
             {% endif %}
-            {% if obj.image2.url != "/media/path/image.jpg" %}
+            {% if obj.image2 and obj.image2.url%}
                 <img class="gallery-image" src="{{ obj.image2.url }}" alt="{{ obj.name }}">
             {% endif %}
-            {% if obj.image3.url != "/media/path/image.jpg" %}
+            {% if obj.image3 and obj.image3.url%}
                 <img class="gallery-image" src="{{ obj.image3.url }}" alt="{{ obj.name }}">
             {% endif %}
-            {% if obj.image4.url != "/media/path/image.jpg" %}
+            {% if obj.image4 and obj.image4.url%}
                 <img class="gallery-image" src="{{ obj.image4.url }}" alt="{{ obj.name }}">
+            {% endif %}
+            {% if obj.image5 and obj.image5.url%}
+                <img class="gallery-image" src="{{ obj.image5.url }}" alt="{{ obj.name }}">
+            {% endif %}
+            {% if obj.image6 and obj.image6.url%}
+                <img class="gallery-image" src="{{ obj.image6.url }}" alt="{{ obj.name }}">
+            {% endif %}
+            {% if obj.image7 and obj.image7.url%}
+                <img class="gallery-image" src="{{ obj.image7.url }}" alt="{{ obj.name }}">
+            {% endif %}
+            {% if obj.image8 and obj.image8.url%}
+                <img class="gallery-image" src="{{ obj.image8.url }}" alt="{{ obj.name }}">
             {% endif %}
         </div>
     {% endif %}
+
 
     <div id="myModal" class="modal">
         <span class="close">&times;</span>
