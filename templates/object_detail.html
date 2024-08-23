@@ -16,20 +16,28 @@
             <p id="description">{{ obj.description }}</p>
         </div>
     </div>
+
     {% if obj.image1.url != "/media/path/image.jpg" or obj.image2.url != "/media/path/image.jpg" or obj.image3.url != "/media/path/image.jpg" or obj.image4.url != "/media/path/image.jpg" %}
         <div class="image-gallery">
             {% if obj.image1.url != "/media/path/image.jpg" %}
-                <img src="{{ obj.image1.url }}" alt="{{ obj.name }}">
+                <img class="gallery-image" src="{{ obj.image1.url }}" alt="{{ obj.name }}">
             {% endif %}
             {% if obj.image2.url != "/media/path/image.jpg" %}
-                <img src="{{ obj.image2.url }}" alt="{{ obj.name }}">
+                <img class="gallery-image" src="{{ obj.image2.url }}" alt="{{ obj.name }}">
             {% endif %}
             {% if obj.image3.url != "/media/path/image.jpg" %}
-                <img src="{{ obj.image3.url }}" alt="{{ obj.name }}">
+                <img class="gallery-image" src="{{ obj.image3.url }}" alt="{{ obj.name }}">
             {% endif %}
             {% if obj.image4.url != "/media/path/image.jpg" %}
-                <img src="{{ obj.image4.url }}" alt="{{ obj.name }}">
+                <img class="gallery-image" src="{{ obj.image4.url }}" alt="{{ obj.name }}">
             {% endif %}
         </div>
     {% endif %}
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <script src="{% static 'js/object_detail.js' %}"></script>
 {% endblock %}
