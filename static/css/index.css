@@ -46,26 +46,37 @@
 
 .carousel-container {
     overflow: hidden;
-    width: 1250px;
+    width: calc(100% - 100px); /* Учитываем 50px отступы с обеих сторон */
+    margin: 0 50px; /* Отступы слева и справа */
+    padding-bottom: 50px; /* Отступ снизу */
 }
 
 .carousel {
     display: flex;
-    gap: 73px;
-    transition: transform 1s ease-in-out;
+    gap: 20px; /* Отступ между элементами карусели */
+    transition: transform 1s ease; /* Плавный переход */
+    padding: 0 10px; /* Отступы внутри карусели */
+    box-sizing: border-box; /* Включаем отступы и границы в ширину элемента */
+    white-space: nowrap; /* Предотвращаем перенос строки */
 }
 
 .carousel-item {
     position: relative;
-    min-width: 360px;
-    min-height: 360px;
+    min-width: 660px; /* Ширина элемента карусели */
+    min-height: 360px; /* Высота элемента карусели */
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
-    border: 5px solid #414042;
     display: flex;
-    align-items: end;
+    flex-direction: column; /* Располагаем элементы вертикально */
+    justify-content: flex-end; /* Выравниваем содержимое по нижнему краю */
     overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
 }
+
+
+
+.carousel-item {}
 
 .carousel-item img {
     width: 100%;
@@ -77,13 +88,20 @@
 .name_lenta {
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    position: absolute;
+    position: relative;
     font-family: Rubik, serif;
     font-weight: 600;
-    font-size: 30px;
-    bottom: 20px;
-    left: 20px;
+    font-size: 25px;
+    margin: 0 20px; /* Отступы для внутреннего пространства */
+    white-space: normal; /* Позволяет перенос текста на новую строку */
+    overflow: visible; /* Позволяет тексту выходить за пределы блока */
+    display: flex; /* Используем flexbox для выравнивания */
+    align-items: flex-end; /* Выравнивание содержимого по нижнему краю */
+    margin-bottom: 20px; /* Отступ снизу */
 }
+
+
+
 
 /* Адаптивные стили для мобильных устройств */
 @media (max-width: 768px) {
@@ -99,6 +117,7 @@
         font-size: 24px;
         text-align: center; /* Центрирование текста */
         padding: 0 20px;
+        margin-left: 0; /* Убираем отступ для мобильных устройств */
     }
 
     .lenta {
@@ -126,7 +145,6 @@
     .carousel-item {
         min-width: 250px;
         min-height: 250px;
-        margin: 0 auto; /* Центрирование каждого элемента карусели */
     }
 
     .name_lenta {

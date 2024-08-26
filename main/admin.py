@@ -4,7 +4,7 @@ from .models import ObjectMain, Managers, Jobs, Object, Partner, applicant
 
 @admin.register(ObjectMain)
 class ItemAdmin(admin.ModelAdmin):
-    list_display = ('name', 'image')
+    list_display = ('name', 'image', 'date', 'description')
 
 @admin.register(Managers)
 class ItemAdmin(admin.ModelAdmin):
