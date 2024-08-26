@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function startAutoScroll() {
         autoScrollInterval = setInterval(() => {
-            currentIndex = (currentIndex + 1) % (totalItems * 2); // Двойной счетчик для бесконечной прокрутки
+            currentIndex = (currentIndex + 1) % (totalItems); // Перемещаемся к следующему элементу
             updateCarousel();
         }, 5000); // Интервал в миллисекундах (5000 мс = 5 секунд)
     }
