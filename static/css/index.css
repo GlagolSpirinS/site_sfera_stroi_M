@@ -9,6 +9,13 @@
     position: relative;
 }
 
+.carousel, .carousel * {
+  user-select: none; /* Предотвращает выделение текста */
+  -webkit-user-select: none; /* Для браузеров на базе WebKit */
+  -moz-user-select: none; /* Для Firefox */
+  -ms-user-select: none; /* Для IE10+ */
+}
+
 .blur img {
     width: 100%;
     height: 100%;
@@ -25,14 +32,16 @@
 /* Анимация для элемента карусели при наведении */
 .carousel-item:hover {
     border-radius: 15px;
-    transform: scale(1.05); /* Легкое увеличение элемента */
     transition: transform 0.3s ease-in-out;
 }
 
 /* Анимация для изображения внутри элемента карусели при наведении */
 .carousel-item:hover img {
     filter: brightness(0.7); /* Затемнение изображения */
-    transition: filter 0.3s ease-in-out;
+    transform: scale(1.1); /* Увеличиваем изображение */
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center; /* Изображение увеличивается от центра */
+    overflow: hidden; /* Обрезаем изображение по границам родителя */
 }
 
 /* Анимация для текста внутри элемента карусели при наведении */
@@ -84,6 +93,7 @@
     padding: 0 10px; /* Отступы внутри карусели */
     box-sizing: border-box; /* Включаем отступы и границы в ширину элемента */
     white-space: nowrap; /* Предотвращаем перенос строки */
+    /*cursor: grab; !* Курсор для состояния ожидания перетаскивания *!*/
 }
 
 .carousel-item {
@@ -93,9 +103,10 @@
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
     display: flex;
+    overflow: hidden; /* Обрезка изображения по границам элемента карусели */
+    position: relative;
     flex-direction: column; /* Располагаем элементы вертикально */
     justify-content: flex-end; /* Выравниваем содержимое по нижнему краю */
-    overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
@@ -110,6 +121,8 @@
     height: 100%;
     object-fit: cover;
     position: absolute;
+    pointer-events: none;
+    transition: transform 0.3s ease; /* Плавное увеличение изображения */
 }
 
 .name_lenta {
@@ -161,17 +174,28 @@
 
     .carousel-container {
         width: 100%;
-        overflow-x: scroll;
+        overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
+        overflow-y: auto; /* Включаем вертикальную прокрутку, если карточек больше, чем может поместиться на экране */
+        display: flex;
+        flex-direction: column; /* Располагаем карточки вертикально */
+        align-items: center;
     }
 
     .carousel {
-        justify-content: center; /* Центрирование элементов внутри карусели */
-        gap: 20px;
+        display: flex;
+        flex-direction: column; /* Вертикальное расположение элементов */
+        width: 100%; /* Заполняем всю доступную ширину */
+        gap: 20px; /* Отступ между карточками */
+        padding: 0;
+        transform: none; /* Убираем трансформации для вертикальной карусели */
     }
 
     .carousel-item {
-        min-width: 250px;
-        min-height: 250px;
+        width: 90%; /* Карточка занимает 90% ширины экрана */
+        min-width: unset; /* Убираем фиксированную ширину */
+        min-height: 250px; /* Минимальная высота карточки */
+        max-width: none; /* Убираем максимальную ширину */
+        margin: 0 auto; /* Центрируем карточки */
     }
 
     .name_lenta {
@@ -204,8 +228,8 @@
     }
 
     .carousel-item {
-        min-width: 500px;
-        min-height: 500px;
+        min-width: 980px; /* Увеличиваем ширину элемента */
+        min-height: 500px; /* Увеличиваем высоту элемента */
     }
 
     .name_lenta {
@@ -238,8 +262,8 @@
     }
 
     .carousel-item {
-        min-width: 700px;
-        min-height: 700px;
+        min-width: 1200px; /* Еще больше увеличиваем ширину элемента */
+        min-height: 800px; /* Еще больше увеличиваем высоту элемента */
     }
 
     .name_lenta {

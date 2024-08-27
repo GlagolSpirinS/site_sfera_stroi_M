@@ -1,44 +1,38 @@
 document.addEventListener("DOMContentLoaded", function() {
     const carousel = document.querySelector(".carousel");
     const items = Array.from(document.querySelectorAll(".carousel-item"));
-    const itemWidth = items[0].offsetWidth;
-    const totalItems = items.length;
-    let currentIndex = 0;
-    let autoScrollInterval;
+    const isMobile = window.innerWidth <= 768;
 
-    // Дублируем элементы карусели для бесконечной прокрутки
-    function duplicateItems() {
-        const itemsFragment = document.createDocumentFragment();
-        items.forEach(item => {
-            const clone = item.cloneNode(true);
-            itemsFragment.appendChild(clone);
+    if (!isMobile) {
+        carousel.style.overflow = 'hidden';
+        carousel.style.whiteSpace = 'nowrap';
+        carousel.style.display = 'flex';
+        carousel.style.flexWrap = 'nowrap';
+
+        // items.forEach(item => {
+        //     item.style.display = 'inline-block';
+        // });
+
+        // Обработка прокрутки колесика мыши
+        carousel.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            carousel.scrollLeft += e.deltaY; // Используем deltaY для прокрутки
         });
-        carousel.appendChild(itemsFragment);
+
+        // Вычисление ширины элемента
+        const itemWidth = items[0].offsetWidth;
+
+        // Функция обновления карусели
+        function updateCarousel() {
+            const offset = -currentIndex * itemWidth;
+            carousel.style.transform = `translateX(${offset}px)`;
+            carousel.style.transition = 'transform 1s ease';
+        }
+
+        // Переменная текущего индекса
+        let currentIndex = 0;
+
+        updateCarousel();
+        startAutoScroll();
     }
-
-    function updateCarousel() {
-        const offset = -currentIndex * itemWidth;
-        carousel.style.transform = `translateX(${offset}px)`;
-        carousel.style.transition = 'transform 1s ease'; // Плавный переход
-    }
-
-    function startAutoScroll() {
-        autoScrollInterval = setInterval(() => {
-            currentIndex = (currentIndex + 1) % (totalItems); // Перемещаемся к следующему элементу
-            updateCarousel();
-        }, 5000); // Интервал в миллисекундах (5000 мс = 5 секунд)
-    }
-
-    function stopAutoScroll() {
-        clearInterval(autoScrollInterval);
-    }
-
-    // Инициализация карусели
-    duplicateItems(); // Дублируем элементы
-    updateCarousel(); // Инициализация начального положения карусели
-    startAutoScroll(); // Запуск автоматической прокрутки
-
-    // Обработка событий
-    carousel.addEventListener("mouseenter", stopAutoScroll); // Останавливаем авто-прокрутку при наведении
-    carousel.addEventListener("mouseleave", startAutoScroll); // Запускаем авто-прокрутку при уходе курсора
 });
