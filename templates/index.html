@@ -17,14 +17,16 @@
         <div class="carousel-container">
             <div class="carousel">
                 {% for obj in objects %}
-                    <div class="carousel-item">
-                        {% if obj.image %}
-                            <img src="{{ obj.image.url }}" alt="{{ obj.name }}">
-                        {% else %}
-                            <p>Нет изображения</p>
-                        {% endif %}
-                        <span class="name_lenta">{{ obj.name }}</span>
-                    </div>
+                    <a href="{% url 'news_detail' obj.id %}" class="carousel-link">
+                        <div class="carousel-item">
+                            {% if obj.image %}
+                                <img src="{{ obj.image.url }}" alt="{{ obj.name }}">
+                            {% else %}
+                                <p>Нет изображения</p>
+                            {% endif %}
+                            <span class="name_lenta">{{ obj.name }}</span>
+                        </div>
+                    </a>
                 {% empty %}
                     <div class="carousel-item">Новостей пока нет</div>
                 {% endfor %}

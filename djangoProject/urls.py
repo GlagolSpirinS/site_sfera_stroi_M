@@ -24,6 +24,7 @@ urlpatterns = [
     path('apply/<int:job_id>/', apply_for_job, name='apply_for_job'),
     path('job/<int:id>/', views.job_detail, name='job_detail'),
     path('object/<int:id>/', views.object_detail, name='object_detail'),
+    path('news/<int:id>/', views.news_detail, name='news_detail'),
     re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
     re_path(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

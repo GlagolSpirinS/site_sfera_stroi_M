@@ -17,6 +17,32 @@
     z-index: 1;
 }
 
+.carousel-link {
+    outline: none;
+    text-decoration: none;
+}
+
+/* Анимация для элемента карусели при наведении */
+.carousel-item:hover {
+    border-radius: 15px;
+    transform: scale(1.05); /* Легкое увеличение элемента */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Анимация для изображения внутри элемента карусели при наведении */
+.carousel-item:hover img {
+    filter: brightness(0.7); /* Затемнение изображения */
+    transition: filter 0.3s ease-in-out;
+}
+
+/* Анимация для текста внутри элемента карусели при наведении */
+.carousel-item:hover .name_lenta {
+    color: #F7941D; /* Изменение цвета текста */
+    transition: color 0.3s ease-in-out;
+}
+
+
+
 .blur p {
     position: relative;
     z-index: 2;
@@ -72,6 +98,7 @@
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
 }
 
 

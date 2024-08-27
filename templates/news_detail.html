@@ -1,0 +1,21 @@
+{% extends "header.html" %}
+
+{% block title %}{{ obj.name }}{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/news_detail.css' %}">
+
+    <h1 class="glavnoe_slovo">{{ obj.name }}</h1>
+    <div class="blur">
+        <div class="image-container">
+            {% if obj.image %}
+                <img class="rounded-image" src="{{ obj.image.url }}" alt="{{ obj.name }}">
+            {% endif %}
+        </div>
+        <div class="opis">
+            <p id="description"><strong>Год:</strong> {{ obj.date }}</p>
+            <p id="description"><strong>Описание:</strong> {{ obj.description }}</p>
+        </div>
+    </div>
+{% endblock %}

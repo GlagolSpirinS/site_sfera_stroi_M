@@ -10,6 +10,7 @@
 .blur {
     display: flex;
     flex-direction: row;
+    align-items: flex-start; /* Добавлено, чтобы выровнять текст по началу изображения */
 }
 
 .image-container {
@@ -20,7 +21,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Избегаем выхода изображения за границы контейнера */
+    flex-shrink: 0; /* Запрещаем уменьшение контейнера изображения */
+    overflow: hidden;
 }
 
 .rounded-image {
@@ -36,6 +38,8 @@
     font-weight: 400;
     font-size: 25px;
     color: #434343;
+    max-width: 763px; /* Устанавливаем максимальную ширину для текста */
+    flex-shrink: 1; /* Разрешаем уменьшение текстового контейнера при необходимости */
 }
 
 #description {
@@ -60,8 +64,8 @@
     .image-container {
         margin-left: 0;
         margin-bottom: 20px;
-        width: 90%; /* Уменьшение ширины для мобильных устройств */
-        height: 200px; /* Примерная высота для мобильных устройств */
+        width: 90%;
+        height: 200px;
     }
 
     .rounded-image {
@@ -74,6 +78,7 @@
         margin-left: 0;
         font-size: 18px;
         width: 90%;
+        max-width: none; /* Убираем ограничение ширины для мобильных устройств */
     }
 
     #description {

@@ -16,6 +16,9 @@ def company(request):
     company_objects = ObjectMain.objects.all()
     return render(request, 'company.html', {'objects': company_objects})
 
+def news_detail(request, id):
+    obj = get_object_or_404(ObjectMain, id=id)
+    return render(request, 'news_detail.html', {'obj': obj})
 
 def personal(request):
     managers = Managers.objects.all()
